@@ -62,7 +62,7 @@ h1 {
 }
 
 .logo span.regular {
-    color: rgb(224, 120, 0);
+    color: rgb(234, 82, 82);
 }
 
 /*justificado de la lista de navegación*/
@@ -92,11 +92,12 @@ li:nth-child(4) {
 }
 
 li:nth-child(4) a {
-    color: rgb(224, 120, 0);
+    color: rgb(234, 82, 82);
     font-weight: bold;
 }
 
 li:nth-child(4) a:hover {
+    color: rgb(153, 35, 55);
     background: #fff;
 }
 

@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ingresar a YCourses</title>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Ingresar - YCourses Login</title>
 </head>
+
 <body>
-    
+    <div class="limiter">
+        <div class="container-login">
+            <div class="login-header">
+                <a href="/index.html">
+                    <h2><span class="capital">Y</span><span class="regular">COURSES</span></h2>
+                </a>
+            </div>
+            <form id="login-form" action="" method="POST">
+                <div class="user-kit">
+                    <input id="usercd" type="email" name="usercd" placeholder="Correo@ejemplo.cl">
+                </div>
+                <div class="pass-kit">
+                    <input id="passcd" type="password" name="passcd" placeholder="Contraseña">
+                </div>
+                <div class="help-kit">
+                    <div class="sub-help">
+                        <input type="checkbox" class="remember-me" name="remember-me" id="rmb">
+                        <label for="remember-me">Recordarme</label>
+                    </div>
+                    <div class="sub-help">
+                        <a href="#" class="txt1">
+                            He olvidado mi contraseña
+                        </a>
+                    </div>
+                </div>
+                <div class="submit-kit">
+                    <input type="submit" class="submit" value="iniciar sesión">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="container-footer">
+        <h2>¿Aún no tienes una cuenta? <a href="#">Regístrate y accede a nuestros cursos y seminarios!</a></h2>
+        
+    </div>
+    <div class="login-menu">
+        <a href="#"><input class="adm" type="submit" value="Ingreso admin"></a>
+        <a href="#"><input class="per" type="submit" value="Ingreso personal"></a>
+        <a href="#"><input class="usr" type="submit" value="Ingreso cliente"></a>
+        
+    </div>
 </body>
+
 </html>

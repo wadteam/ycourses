@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/*variables*/
+
+$monty: 'Montserrat',
+sans-serif;
+$ubuntu: 'Ubuntu',
+sans-serif;
+/*paleta de colores */
+
+$primary: rgb(234,
+82,
+82);
+/**/
+
+$primary-darken: rgb(153,
+35,
+55);
+/**/
+
+$secondary: rgb(231,
+0,
+154);
+/**/
+
+$corporativo:rgb(224,
+120,
+0);
+$estructura: rgba(128,
+128,
+128,
+.2);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: $monty;
+}
+
+.limiter {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login {
+    width: 35em;
+    /*background: chocolate;*/
+    padding: 0 3em;
+    .login-header a {
+        text-decoration: none;
+    }
+    h2 {
+        text-align: center;
+        font-weight: 900;
+        font-size: 3em;
+        padding-top: .7em;
+        margin-bottom: 1em;
+        color: rgba(48, 0, 92, 0.8);
+        text-transform: uppercase;
+        .capital {
+            color: black;
+        }
+        .regular {
+            color: $primary;
+        }
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        height: 3.5em;
+        margin-bottom: 1em;
+        border-radius: 3px;
+        border: 0px solid;
+        /*Configuracion de font*/
+        color: rgb(64, 56, 102);
+        background-color: rgb(230, 230, 230);
+        font-family: $ubuntu;
+        font-weight: bold;
+        font-size: 1.3em;
+        padding-left: 1.3em;
+        &:focus {
+            border: 1px solid;
+            border-color: $primary;
+        }
+    }
+    input[type="checkbox"] {
+        border-color: $primary;
+        border-radius: 1px solid;
+        +label {
+            color: rgba(119, 119, 119, 0.822);
+            font-weight: bold;
+        }
+    }
+    input[type="submit"] {
+        background-color: $primary;
+        color: white;
+        width: 100%;
+        height: 3.5em;
+        font-size: 1.3em;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-darken;
+            transition: .3s all ease;
+        }
+    }
+    .help-kit {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+        .sub-help {
+            display: -webkit-inline-box;
+            a {
+                text-decoration: none;
+                font-family: $ubuntu;
+                color: $primary;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/*desarrollo del footer*/
+
+.container-footer {
+    border: 2px solid;
+    border-color: $estructura;
+    height: 5em;
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    h2 {
+        font-size: 1em;
+        color: gray;
+        a {
+            color: steelblue;
+            &:hover {
+                color: rgb(54, 114, 163);
+            }
+        }
+    }
+}
+
+.login-menu {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        text-decoration: none;
+    }
+    .adm,
+    .usr,
+    .per {
+        width: 12vw;
+        height: 3vh;
+        border: none;
+        border-radius: 2px;
+        font-family: $monty;
+        color: white;
+        cursor: pointer;
+    }
+    .adm {
+        background: rgb(0, 103, 187);
+    }
+    .usr {
+        background: rgb(234, 82, 82);
+    }
+    .per {
+        background: rgb(64, 56, 102);
+    }
+}
