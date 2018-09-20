@@ -126,18 +126,25 @@ nav ul li a:hover {
     transition: .3s ease all;
 }
 
-li:nth-child(4) {
+nav ul li:nth-child(4) {
     padding-right: 2em;
 }
 
-li:nth-child(4) a {
+nav.loc ul li:nth-child(4) a {
     color: rgb(234, 82, 82);
     font-weight: bold;
 }
 
-li:nth-child(4) a:hover {
+nav.loc  ul li:nth-child(4) a:hover {
     color: rgb(153, 35, 55);
     background: #fff;
+}
+
+nav.zen ul li:nth-child(4) a:hover {
+    
+}
+nav.adm-nav ul li:nth-child(4) span {
+    height: 10px;
 }
 
 .job-container,
