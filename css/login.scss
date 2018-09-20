@@ -23,9 +23,12 @@ $secondary: rgb(231,
 154);
 /**/
 
-$corporativo:rgb(224,
-120,
-0);
+$facebook: rgb(0,
+103,
+187);
+$facebook-darken: rgb(0,
+81,
+148);
 $estructura: rgba(128,
 128,
 128,
@@ -173,12 +176,24 @@ html {
         cursor: pointer;
     }
     .adm {
-        background: rgb(0, 103, 187);
+        background-color: $facebook;
+        &:hover {
+            background-color: $facebook-darken;
+            transition: .2s all ease;
+        }
     }
     .usr {
-        background: rgb(234, 82, 82);
+        background: $primary;
+        &:hover {
+            background-color: $primary-darken;
+            transition: .2s all ease;
+        }
     }
     .per {
-        background: rgb(64, 56, 102);
+        background-color: rgb(64, 56, 102);
+        &:hover {
+            background-color: rgb(46, 40, 73);
+            transition: .2s all ease;
+        }
     }
 }

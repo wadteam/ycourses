@@ -1,37 +1,46 @@
 /*Fuentes */
+
 /*Ubuntu*/
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Ubuntu;
     /* Safari, Android, iOS */
     src: url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Ubuntu-Bold;
     /* Safari, Android, iOS */
     src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Ubuntu-Light;
     /* Safari, Android, iOS */
     src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
+
 /**/
+
 /*Montserrat*/
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Montserrat;
     /* Safari, Android, iOS */
     src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Montserrat-Bold;
     /* Safari, Android, iOS */
     src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
+
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Montserrat-Black;
@@ -39,16 +48,155 @@
     src: url('/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype'), /*Formato para navegadores modernoss */
 }
 
+/*variables locales*/
 
-*{
-    box-sizing:border-box;
+$monty: Montserrat,
+sans-serif;
+$primary: rgb(234,
+82,
+82);
+/**/
+
+$primary-darken: rgb(153,
+35,
+55);
+/**/
+
+$secondary: rgb(231,
+0,
+154);
+/**/
+
+$facebook: rgb(0,
+103,
+187);
+$facebook-darken: rgb(0,
+81,
+148);
+$estructura: rgba(128,
+128,
+128,
+.2);
+* {
+    box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
+    clear: both;
     padding: 0;
     margin: 0;
 }
 
 
 
+/*Personalización de la barra de navegación de administrador*/
 
+header {
+    a.logo{
+        font-family: Montserrat-bold;
+        .capital, .regular{
+           font-weight: 200; 
+        }
+    }
+
+    .profile {
+        height: 22px;
+        float: left;
+        display: block;
+        margin-right: 5px;
+    }
+    /*
+    .side-bar{
+        height: 30em;
+        width: 60%;
+        background-color: beige;
+        float: left;
+    }
+    */
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.content {
+    height: 1000px;
+    background-color: blanchedalmond;
+    width: calc(100% - 12.5em);
+    padding-right:0;
+    margin-right: 0;
+    /*Configuracion de layout*/
+}
+
+/* Configuracion del sidebar*/
+
+.side-bar {
+    /*Configuracion del sidebar y layout*/
+    width: 14.2em;
+    line-height: 1;
+    font-size: 14px;
+    &::before {
+        /*After & Before*/
+        content: '';
+        display: block;
+    }
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    a {
+        /*Elementos de lista*/
+        display: block;
+        padding: 20px 20px;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    ul,
+    ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        position: relative;
+        float: left;
+        & li {
+            float: none;
+            min-height: 1px;
+            line-height: 2em;
+            vertical-align: middle;
+            position: relative;
+            &:hover {
+                position: relative;
+                cursor: default;
+            }
+        }
+    }
+    &>ul {
+        width: 200px;
+        &>li {
+            &.active a {
+                background: $estructura;
+            }
+            &>a {
+                border-right: 4px solid $estructura;
+                color: $primary;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:hover a,
+            a:hover {
+                background: $estructura;
+            }
+        }
+    }
+    li {
+        position: relative;
+    }
+}

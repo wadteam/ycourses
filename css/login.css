@@ -189,14 +189,32 @@ html {
 }
 
 .login-menu .adm {
-  background: #0067bb;
+  background-color: #0067bb;
+}
+
+.login-menu .adm:hover {
+  background-color: #005194;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
 }
 
 .login-menu .usr {
   background: #ea5252;
 }
 
+.login-menu .usr:hover {
+  background-color: #992337;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
+}
+
 .login-menu .per {
-  background: #403866;
+  background-color: #403866;
+}
+
+.login-menu .per:hover {
+  background-color: #2e2849;
+  -webkit-transition: .2s all ease;
+  transition: .2s all ease;
 }
 /*# sourceMappingURL=login.css.map */
