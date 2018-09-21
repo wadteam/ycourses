@@ -97,10 +97,11 @@ html {
         border-radius: 2px;
         cursor: pointer;
         &:hover {
-            /*Efecto Fancy para cuando posemos el cursor sobre el botón de ingreso, la propiedad transition nos permite modificar la velocidad con la que el botón cambia de botón, en este caso los valores:
+            /*Efecto Fancy para cuando posemos el cursor sobre el botón de ingreso. 
+            La propiedad transition nos permite modificar la velocidad con la que el botón cambia de color, en este caso los valores manejados son:
             ".3s" nos indica que la animación durará 1/3 de segundo.
-            "all" debe aplicarse a todos los cambios que experimente este botón.
-            "ease" es el valor por defecto de esta propiedad, y nos indica que el efecto comienza lentamente para luego volverse rápido, y terminar de forma lenta. Puedes jugar con los valores para notar con facilidad como funciona.
+            "all" debe aplicarse un efecto de transición a todos los cambios que experimente este botón.
+            "ease" es el valor por defecto de esta propiedad y el tipo de transición en cuestión; nos indica que el efecto comienza lentamente para luego volverse rápido, y terminar de forma lenta. Puedes jugar con los valores de la cantidad de segundos para notar con facilidad como funciona este valor.
             
             */
             background-color: $primary-darken;
