@@ -1,0 +1,49 @@
+/*Fuentes */
+
+/*Ubuntu*/
+
+@import "_fonts";
+@import "_colores";
+@import "_header";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: $monty;
+    font-weight: 300;
+    background-color: #EFEFEF;
+}
+
+/*Para la lista de links: sin estilo para links*/
+
+/*Selector del header*/
+
+main {
+    /*Aplicando estilos al contenido main*/
+    .container {
+        /*Contenedor principal */
+        position: absolute;
+        background-color: #455668;
+        width: 100%;
+    }
+    .card {
+        /*Simulando componente card de bootstrap 4*/
+        width: 100%;
+        position: relative;
+    }
+    .image img {
+        /* Modificando los atributos de la imagen principal del card */
+        background-size: contain;
+        background-attachment: fixed;
+        height: 80%;
+        width: 100%;
+    }
+}

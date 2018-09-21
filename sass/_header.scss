@@ -1,0 +1,62 @@
+header {
+    /* Aplicando estilos al header y su navbar principal*/
+    background-color: $blanco;
+    /*Display grid para posicionamiento de los links*/
+    display: grid;
+    /*Espaciado entre links utilizando la propiedad grid*/
+    grid-template-columns: 30% auto;
+    a {
+        /*Personalizacion de los links del navbar*/
+        color: $links;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    h1 {
+        /*Selector para Links del header*/
+        margin-bottom: 1em;
+    }
+    .logo {
+        /*Logo, con medidas dinámicas para diseño responsivo*/
+        /*Personalización del logo*/
+        font-weight: bold;
+        font-size: 1.3em;
+        padding: 1.5em 0 0 2em;
+        margin: 0;
+        font-family: $monty-negrita;
+        color: $primary;
+        &::first-letter {
+            color: black;
+        }
+    }
+    nav {
+        /*justificado con alineación a la derecha de la lista de navegación*/
+        justify-self: right;
+        ul {
+            list-style-type: none;
+            li {
+                display: inline;
+                a {
+                    padding: 2em;
+                    padding-top: 2em;
+                    display: inline-block;
+                    &:hover {
+                        /*Efecto de colores que cambia con el desplazamiento del cursor*/
+                        background: rgb(226, 226, 226);
+                        transition: .3s ease all;
+                    }
+                }
+                &.link-ingreso {
+                    padding-right: 2em;
+                    a {
+                        color: $primary;
+                        font-family: $monty-negrita;
+                        &:hover {
+                            color: $primary-darken;
+                            background: $blanco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
