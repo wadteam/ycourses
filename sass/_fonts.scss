@@ -1,0 +1,101 @@
+/*Fuentes */
+
+/*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
+Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
+El uso y manejo de variables de hojas de estilos es una de las de las características del precompilador SASS.
+* 
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*
+*/
+
+/*
+*
+Las variables que contienen todas las fuentes del proyecto se encuentran contenidas en /sass/_fuentes.scss.
+*
+Si deseas cambiar o agregar las fuentes existentes de este proyecto te recomiendo algunas herramientas web para ello:
+*
+1. Catálogo Google Fonts:
+http://fonts.google.com/
+*
+2. Catálogo Google Fonts 2:
+https://www.fonts.com/web-fonts/google?showGoogleFontsDialog
+*
+3. Catálogo Fonts.com:
+https://www.fonts.com/
+*
+4. Catálogo Font Squirrel:
+https://www.fontsquirrel.com/
+*
+*/
+
+/*Ubuntu*/
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Ubuntu;
+    /* Safari, Android, iOS */
+    src: url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Ubuntu-Bold;
+    /* Safari, Android, iOS */
+    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Ubuntu-Light;
+    /* Safari, Android, iOS */
+    src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+/**/
+
+/*Montserrat*/
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Montserrat;
+    /* Safari, Android, iOS */
+    src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Montserrat-Bold;
+    /* Safari, Android, iOS */
+    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+@font-face {
+    /*Deepest Possible Browser Support*/
+    font-family: Montserrat-Black;
+    /* Safari, Android, iOS */
+    src: url('/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype'), /*Formato para navegadores modernoss */
+}
+
+/*Instanciados */
+
+$ubuntu: Ubuntu,
+sans-serif;
+$ubuntu-negrita: Ubuntu-Bold,
+sans-serif;
+$ubuntu-light: Ubuntu-Light,
+sans-serif;
+$monty: Montserrat,
+sans-serif;
+$monty-negrita: Montserrat-Bold,
+sans-serif;
+$monty-black: Montserrat-Black;

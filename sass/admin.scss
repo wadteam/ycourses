@@ -1,0 +1,156 @@
+/*Importando variables*/
+
+@import "_fonts";
+@import "_colores";
+/*
+*
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html,
+body {
+    /*Limpiamos estilos establecidos en alguna otra hoja de estilo y seteamos los paddings y margins a cero */
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /*Personalización de la barra de navegación de administrador*/
+    a.logo {
+        /*Aplicamos negritas al logotipo de la página web*/
+        font-family: $monty-negrita;
+        .capital,
+        .regular {
+            /*La propiedad font-weight nos permite manejar que tan negrita queremos que sea nuestra fuente*/
+            font-weight: 200;
+        }
+    }
+    .profile {
+        /*Modificamos la pequeña foto de perfil de usuario */
+        height: 22px;
+        float: left;
+        display: block;
+        margin-right: 5px;
+    }
+}
+
+main {
+    /*Main es en verdad un contenedor, estándar en HTML5 para indicar que dentro de este contenedor va el contenido principal (y más importante) de esta página.
+    Aquí hemos convertido a main en contenedor con propiedades flex (responsivas). Además mediante la propiedad "flex-flow" con un valor "row wrap" indicamos al navegador que los componentes "hijos" (al interior de  este Main) van a acomodarse automáticamente horizontalmente en tamaños de pantalla grande y verticalmente en tamaños de pantalla pequeños.
+    Si deseas conocer más de la propiedad Flex y el estándar FlexBox consultar:
+    *
+    1. Documentación oficial de W3C:
+    https://www.w3schools.com/css/css3_flexbox.asp
+    *
+    2. Guía MUY RECOMENDADA de FlexBox CSS Tricks (en inglés):
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    *
+    3. Documentación oficial de MDN (Mozilla) y en español:
+    https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS
+    *
+    4. Guía de FlexBox desde 0 por FalconMasters:
+    https://www.youtube.com/watch?v=F-KCncXMPk0
+    *
+    */
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.content {
+    /*Configuracion de layout
+    dado que el ancho de nuestra página se debe adaptar a distintos tamaños, el ancho de este div debe ser dinámico (cambiante) para poder encajar junto a la barra de navegación de administración. Para eso utilizamos una herramienta muy útil de CSS: La función calc, siéntete libre de modificar sus valores para entender como funciona.*/
+    height: 1000px;
+    background-color: white;
+    width: calc(100% - 12.5em);
+    padding-right: 0;
+    margin-right: 0;
+}
+
+/* Configuracion del sidebar*/
+
+.side-bar {
+    /*Configuracion del sidebar (barra de navegación lateral)y layout*/
+    width: 14.2em;
+    line-height: 1;
+    font-size: 14px;
+    &::before {
+        /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 4 de su estándar.
+        Básicamente sirven para manipular los elementos de nuestros documentos HTML o incluso añadir nuevos elementos que no estén especificados.
+        *
+        Si deseas conocer más al respecto:
+        *
+        1. Documentación ::before MDN en español:
+        https://developer.mozilla.org/es/docs/Web/CSS/::before
+        *
+        2. Documentación ::after MDN en español:
+        https://developer.mozilla.org/es/docs/Web/CSS/::after
+        *
+        3. Documentación completa del estándar (Módulo 4) W3C en inglés:
+        https://www.w3.org/TR/css-ui-4/
+        */
+        content: '';
+        display: block;
+    }
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    a {
+        /*Elementos de lista*/
+        display: block;
+        padding: 20px 20px;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    ul,
+    ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        position: relative;
+        float: left;
+        & li {
+            float: none;
+            min-height: 1px;
+            line-height: 2em;
+            vertical-align: middle;
+            position: relative;
+            &:hover {
+                position: relative;
+                cursor: default;
+            }
+        }
+    }
+    &>ul {
+        width: 200px;
+        &>li {
+            &.active a {
+                background: $estructura;
+            }
+            &>a {
+                border-right: 4px solid $estructura;
+                color: $primary;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:hover a,
+            a:hover {
+                background: $estructura;
+            }
+        }
+    }
+    li {
+        position: relative;
+    }
+}

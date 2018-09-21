@@ -1,0 +1,52 @@
+/*
+* 
+En /sass/_colores.scss se almacena toda la paleta de colores de este sitio web (es decir, sus códigos RGB, RGBA, HEX, entre otros y sus respectivas variables contenedoras), para ser posteriormente utilizadas en las hojas .scss ubicadas en la carpeta /sass. 
+Esto debido a que este proyecto hace uso de un precompilador de hojas de estilos llamado SAAS, una técnica muy utilizada para hacer uso eficiente del código css de proyectos extensos.
+*
+A pesar de esto los resultados finales (que son los que el navegador "lee") siempre quedan guardados en los archivos con extensión css.
+*
+Siéntete libre de modificar los archivos CSS si así lo deseas.
+*
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*******************************************************************
+*
+Si deseas modificar la paleta de colores, te recomiendo de hacer uso de las diferentes herramientas en la red:
+*
+1. Gama de Paletas de colores ColorHunt:
+https://colorhunt.co/
+*
+2. Generador de paleta de colores a partir de imágenes CANVA:
+https://www.canva.com/color-palette/
+*
+3. Paleta de colores Material Design:
+https://material.io/tools/color/#!/?view.left=0&view.right=0
+*
+4. Gradientes UIGradients:
+https://uigradients.com/#Nighthawk
+*
+5. Generador de gradientes CSS Matic:
+https://cssmatic.com/gradient-generator
+*
+Debes tener en cuenta que las variables de colores, fuentes y cualquiera que tengas en mente solo pueden ser usadas en archivos con extensión .SCSS
+*/
+
+/*Colores primarios*/
+
+$primary: rgb(234, 82, 82);
+$primary-darken: rgb(153, 35, 55);
+/*Colores secundarios*/
+
+$secondary: rgb(231, 0, 154);
+$facebook: rgb(0, 103, 187);
+$facebook-darken: rgb(0, 81, 148);
+$estructura: rgba(128, 128, 128, .2);

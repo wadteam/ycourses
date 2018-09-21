@@ -1,5 +1,42 @@
 @charset "UTF-8";
+/*Importando variables*/
 /*Fuentes */
+/*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
+Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
+El uso y manejo de variables de hojas de estilos es una de las de las características del precompilador SASS.
+* 
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*
+*/
+/*
+*
+Las variables que contienen todas las fuentes del proyecto se encuentran contenidas en /sass/_fuentes.scss.
+*
+Si deseas cambiar o agregar las fuentes existentes de este proyecto te recomiendo algunas herramientas web para ello:
+*
+1. Catálogo Google Fonts:
+http://fonts.google.com/
+*
+2. Catálogo Google Fonts 2:
+https://www.fonts.com/web-fonts/google?showGoogleFontsDialog
+*
+3. Catálogo Fonts.com:
+https://www.fonts.com/
+*
+4. Catálogo Font Squirrel:
+https://www.fontsquirrel.com/
+*
+*/
 /*Ubuntu*/
 @font-face {
   /*Deepest Possible Browser Support*/
@@ -7,21 +44,18 @@
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
 }
-
 @font-face {
   /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Bold;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
 }
-
 @font-face {
   /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Light;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
 }
-
 /**/
 /*Montserrat*/
 @font-face {
@@ -30,58 +64,92 @@
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 }
-
 @font-face {
   /*Deepest Possible Browser Support*/
   font-family: Montserrat-Bold;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
 }
-
 @font-face {
   /*Deepest Possible Browser Support*/
   font-family: Montserrat-Black;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
 }
-
-/*variables locales*/
-/**/
-/**/
-/**/
+/*Instanciados */
+/*
+* 
+En /sass/_colores.scss se almacena toda la paleta de colores de este sitio web (es decir, sus códigos RGB, RGBA, HEX, entre otros y sus respectivas variables contenedoras), para ser posteriormente utilizadas en las hojas .scss ubicadas en la carpeta /sass. 
+Esto debido a que este proyecto hace uso de un precompilador de hojas de estilos llamado SAAS, una técnica muy utilizada para hacer uso eficiente del código css de proyectos extensos.
+*
+A pesar de esto los resultados finales (que son los que el navegador "lee") siempre quedan guardados en los archivos con extensión css.
+*
+Siéntete libre de modificar los archivos CSS si así lo deseas.
+*
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*******************************************************************
+*
+Si deseas modificar la paleta de colores, te recomiendo de hacer uso de las diferentes herramientas en la red:
+*
+1. Gama de Paletas de colores ColorHunt:
+https://colorhunt.co/
+*
+2. Generador de paleta de colores a partir de imágenes CANVA:
+https://www.canva.com/color-palette/
+*
+3. Paleta de colores Material Design:
+https://material.io/tools/color/#!/?view.left=0&view.right=0
+*
+4. Gradientes UIGradients:
+https://uigradients.com/#Nighthawk
+*
+5. Generador de gradientes CSS Matic:
+https://cssmatic.com/gradient-generator
+*
+Debes tener en cuenta que las variables de colores, fuentes y cualquiera que tengas en mente solo pueden ser usadas en archivos con extensión .SCSS
+*/
+/*Colores primarios*/
+/*Colores secundarios*/
+/*
+*
+*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 html,
 body {
+  /*Limpiamos estilos establecidos en alguna otra hoja de estilo y seteamos los paddings y margins a cero */
   clear: both;
   padding: 0;
   margin: 0;
 }
 
-/*Personalización de la barra de navegación de administrador*/
 header {
-  /*
-    .side-bar{
-        height: 30em;
-        width: 60%;
-        background-color: beige;
-        float: left;
-    }
-    */
+  /*Personalización de la barra de navegación de administrador*/
 }
-
 header a.logo {
-  font-family: Montserrat-bold;
+  /*Aplicamos negritas al logotipo de la página web*/
+  font-family: Montserrat-Bold, sans-serif;
 }
-
-header a.logo .capital, header a.logo .regular {
+header a.logo .capital,
+header a.logo .regular {
+  /*La propiedad font-weight nos permite manejar que tan negrita queremos que sea nuestra fuente*/
   font-weight: 200;
 }
-
 header .profile {
+  /*Modificamos la pequeña foto de perfil de usuario */
   height: 22px;
   float: left;
   display: block;
@@ -89,45 +157,68 @@ header .profile {
 }
 
 main {
+  /*Main es en verdad un contenedor, estándar en HTML5 para indicar que dentro de este contenedor va el contenido principal (y más importante) de esta página.
+  Aquí hemos convertido a main en contenedor con propiedades flex (responsivas). Además mediante la propiedad "flex-flow" con un valor "row wrap" indicamos al navegador que los componentes "hijos" (al interior de  este Main) van a acomodarse automáticamente horizontalmente en tamaños de pantalla grande y verticalmente en tamaños de pantalla pequeños.
+  Si deseas conocer más de la propiedad Flex y el estándar FlexBox consultar:
+  *
+  1. Documentación oficial de W3C:
+  https://www.w3schools.com/css/css3_flexbox.asp
+  *
+  2. Guía MUY RECOMENDADA de FlexBox CSS Tricks (en inglés):
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  *
+  3. Documentación oficial de MDN (Mozilla) y en español:
+  https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS
+  *
+  4. Guía de FlexBox desde 0 por FalconMasters:
+  https://www.youtube.com/watch?v=F-KCncXMPk0
+  *
+  */
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .content {
+  /*Configuracion de layout
+  dado que el ancho de nuestra página se debe adaptar a distintos tamaños, el ancho de este div debe ser dinámico (cambiante) para poder encajar junto a la barra de navegación de administración. Para eso utilizamos una herramienta muy útil de CSS: La función calc, siéntete libre de modificar sus valores para entender como funciona.*/
   height: 1000px;
-  background-color: blanchedalmond;
+  background-color: white;
   width: calc(100% - 12.5em);
   padding-right: 0;
   margin-right: 0;
-  /*Configuracion de layout*/
 }
 
 /* Configuracion del sidebar*/
 .side-bar {
-  /*Configuracion del sidebar y layout*/
+  /*Configuracion del sidebar (barra de navegación lateral)y layout*/
   width: 14.2em;
   line-height: 1;
   font-size: 14px;
 }
-
 .side-bar::before {
-  /*After & Before*/
-  content: '';
+  /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 4 de su estándar.
+  Básicamente sirven para manipular los elementos de nuestros documentos HTML o incluso añadir nuevos elementos que no estén especificados.
+  *
+  Si deseas conocer más al respecto:
+  *
+  1. Documentación ::before MDN en español:
+  https://developer.mozilla.org/es/docs/Web/CSS/::before
+  *
+  2. Documentación ::after MDN en español:
+  https://developer.mozilla.org/es/docs/Web/CSS/::after
+  *
+  3. Documentación completa del estándar (Módulo 4) W3C en inglés:
+  https://www.w3.org/TR/css-ui-4/
+  */
+  content: "";
   display: block;
 }
-
 .side-bar::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
-
 .side-bar a {
   /*Elementos de lista*/
   display: block;
@@ -136,19 +227,16 @@ main {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .side-bar ul,
 .side-bar ul li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .side-bar ul {
   position: relative;
   float: left;
 }
-
 .side-bar ul li {
   float: none;
   min-height: 1px;
@@ -156,35 +244,29 @@ main {
   vertical-align: middle;
   position: relative;
 }
-
 .side-bar ul li:hover {
   position: relative;
   cursor: default;
 }
-
 .side-bar > ul {
   width: 200px;
 }
-
 .side-bar > ul > li.active a {
   background: rgba(128, 128, 128, 0.2);
 }
-
 .side-bar > ul > li > a {
   border-right: 4px solid rgba(128, 128, 128, 0.2);
   color: #ea5252;
 }
-
 .side-bar > ul > li > a:hover {
   color: #ea5252;
 }
-
 .side-bar > ul > li:hover a,
 .side-bar > ul > li a:hover {
   background: rgba(128, 128, 128, 0.2);
 }
-
 .side-bar li {
   position: relative;
 }
+
 /*# sourceMappingURL=admin.css.map */

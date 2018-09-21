@@ -1,39 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,700');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-/*variables*/
+/*Importando variables*/
 
-$monty: 'Montserrat',
-sans-serif;
-$ubuntu: 'Ubuntu',
-sans-serif;
-/*paleta de colores */
-
-$primary: rgb(234,
-82,
-82);
-/**/
-
-$primary-darken: rgb(153,
-35,
-55);
-/**/
-
-$secondary: rgb(231,
-0,
-154);
-/**/
-
-$facebook: rgb(0,
-103,
-187);
-$facebook-darken: rgb(0,
-81,
-148);
-$estructura: rgba(128,
-128,
-128,
-.2);
+@import "_fonts";
+@import "_colores";
 * {
+    /*Aplicamos las reglas generales de la hoja de estilos, para evitar que nuestros componentes tengan márgenes y paddings por defecto.
+    */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -41,10 +12,12 @@ $estructura: rgba(128,
 
 body,
 html {
+    /*La fuente por defecto para el documento html y su body */
     font-family: $monty;
 }
 
 .limiter {
+    /*Esta clase cumple la función de centrar el formulario completo, para eso hacemos uso del display:flex (habilitar el comportamiento flex de este div y todos sus componentes internos), el justify-content:center (para centrar horizontalmente nuestro formulario) y el align-items:center (para centrar verticalmente) */
     width: 100%;
     min-height: 600px;
     display: flex;
@@ -53,6 +26,9 @@ html {
 }
 
 .container-login {
+    /*Establecemos las "reglas" de estilo para el contenedor del formulario de ingreso al sistema. 
+    Este es el componente "hijo" del componente con clase .limiter
+    */
     width: 35em;
     /*background: chocolate;*/
     padding: 0 3em;
@@ -60,6 +36,7 @@ html {
         text-decoration: none;
     }
     h2 {
+        /*Modificando el encabezado YCOURSES*/
         text-align: center;
         font-weight: 900;
         font-size: 3em;
@@ -68,14 +45,17 @@ html {
         color: rgba(48, 0, 92, 0.8);
         text-transform: uppercase;
         .capital {
+            /*Cambiar de color la primera letra de la palabra YCOURSES*/
             color: black;
         }
         .regular {
+            /*La palabra YCOURSES debe ir con el color primario del "logotipo"*/
             color: $primary;
         }
     }
     input[type="email"],
     input[type="password"] {
+        /*Aplicando estilos sobre campos del tipo email y password*/
         width: 100%;
         height: 3.5em;
         margin-bottom: 1em;
@@ -89,11 +69,13 @@ html {
         font-size: 1.3em;
         padding-left: 1.3em;
         &:focus {
+            /*Añadir bordes a los campos email y contraseña cuando los indico con el cursor*/
             border: 1px solid;
             border-color: $primary;
         }
     }
     input[type="checkbox"] {
+        /*Aplicando estilos sobre campo checkbox "Recordarme"*/
         border-color: $primary;
         border-radius: 1px solid;
         +label {
@@ -102,6 +84,7 @@ html {
         }
     }
     input[type="submit"] {
+        /*Aplicando estilos sobre nuestro botón submit*/
         background-color: $primary;
         color: white;
         width: 100%;
@@ -114,6 +97,12 @@ html {
         border-radius: 2px;
         cursor: pointer;
         &:hover {
+            /*Efecto Fancy para cuando posemos el cursor sobre el botón de ingreso, la propiedad transition nos permite modificar la velocidad con la que el botón cambia de botón, en este caso los valores:
+            ".3s" nos indica que la animación durará 1/3 de segundo.
+            "all" debe aplicarse a todos los cambios que experimente este botón.
+            "ease" es el valor por defecto de esta propiedad, y nos indica que el efecto comienza lentamente para luego volverse rápido, y terminar de forma lenta. Puedes jugar con los valores para notar con facilidad como funciona.
+            
+            */
             background-color: $primary-darken;
             transition: .3s all ease;
         }
@@ -139,6 +128,7 @@ html {
 /*desarrollo del footer*/
 
 .container-footer {
+    /*Establecemos los estilos para el footer de esta página*/
     border: 2px solid;
     border-color: $estructura;
     height: 5em;
@@ -158,6 +148,7 @@ html {
 }
 
 .login-menu {
+    /*Estilos para el menú de botones para simular el ingreso a las distintas interfaces del sistema.*/
     margin-top: 2em;
     display: flex;
     justify-content: space-evenly;
@@ -176,6 +167,7 @@ html {
         cursor: pointer;
     }
     .adm {
+        /*Personalización de botón de adminstración*/
         background-color: $facebook;
         &:hover {
             background-color: $facebook-darken;
@@ -183,6 +175,7 @@ html {
         }
     }
     .usr {
+        /*Personalización de botón de usuario*/
         background: $primary;
         &:hover {
             background-color: $primary-darken;
@@ -190,6 +183,7 @@ html {
         }
     }
     .per {
+        /*Personalización de botón de personal*/
         background-color: rgb(64, 56, 102);
         &:hover {
             background-color: rgb(46, 40, 73);

@@ -1,66 +1,180 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700");
-@import url("https://fonts.googleapis.com/css?family=Ubuntu");
-/*variables*/
-/*paleta de colores */
+@charset "UTF-8";
+/*Importando variables*/
+/*Fuentes */
+/*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
+Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
+El uso y manejo de variables de hojas de estilos es una de las de las características del precompilador SASS.
+* 
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*
+*/
+/*
+*
+Las variables que contienen todas las fuentes del proyecto se encuentran contenidas en /sass/_fuentes.scss.
+*
+Si deseas cambiar o agregar las fuentes existentes de este proyecto te recomiendo algunas herramientas web para ello:
+*
+1. Catálogo Google Fonts:
+http://fonts.google.com/
+*
+2. Catálogo Google Fonts 2:
+https://www.fonts.com/web-fonts/google?showGoogleFontsDialog
+*
+3. Catálogo Fonts.com:
+https://www.fonts.com/
+*
+4. Catálogo Font Squirrel:
+https://www.fontsquirrel.com/
+*
+*/
+/*Ubuntu*/
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu-Bold;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu-Light;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+}
 /**/
-/**/
-/**/
+/*Montserrat*/
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Black;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+}
+/*Instanciados */
+/*
+* 
+En /sass/_colores.scss se almacena toda la paleta de colores de este sitio web (es decir, sus códigos RGB, RGBA, HEX, entre otros y sus respectivas variables contenedoras), para ser posteriormente utilizadas en las hojas .scss ubicadas en la carpeta /sass. 
+Esto debido a que este proyecto hace uso de un precompilador de hojas de estilos llamado SAAS, una técnica muy utilizada para hacer uso eficiente del código css de proyectos extensos.
+*
+A pesar de esto los resultados finales (que son los que el navegador "lee") siempre quedan guardados en los archivos con extensión css.
+*
+Siéntete libre de modificar los archivos CSS si así lo deseas.
+*
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*******************************************************************
+*
+Si deseas modificar la paleta de colores, te recomiendo de hacer uso de las diferentes herramientas en la red:
+*
+1. Gama de Paletas de colores ColorHunt:
+https://colorhunt.co/
+*
+2. Generador de paleta de colores a partir de imágenes CANVA:
+https://www.canva.com/color-palette/
+*
+3. Paleta de colores Material Design:
+https://material.io/tools/color/#!/?view.left=0&view.right=0
+*
+4. Gradientes UIGradients:
+https://uigradients.com/#Nighthawk
+*
+5. Generador de gradientes CSS Matic:
+https://cssmatic.com/gradient-generator
+*
+Debes tener en cuenta que las variables de colores, fuentes y cualquiera que tengas en mente solo pueden ser usadas en archivos con extensión .SCSS
+*/
+/*Colores primarios*/
+/*Colores secundarios*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  /*Aplicamos las reglas generales de la hoja de estilos, para evitar que nuestros componentes tengan márgenes y paddings por defecto.
+  */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body,
 html {
-  font-family: "Montserrat", sans-serif;
+  /*La fuente por defecto para el documento html y su body */
+  font-family: Montserrat, sans-serif;
 }
 
 .limiter {
+  /*Esta clase cumple la función de centrar el formulario completo, para eso hacemos uso del display:flex (habilitar el comportamiento flex de este div y todos sus componentes internos), el justify-content:center (para centrar horizontalmente nuestro formulario) y el align-items:center (para centrar verticalmente) */
   width: 100%;
   min-height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-login {
+  /*Establecemos las "reglas" de estilo para el contenedor del formulario de ingreso al sistema. 
+  Este es el componente "hijo" del componente con clase .limiter
+  */
   width: 35em;
   /*background: chocolate;*/
   padding: 0 3em;
 }
-
 .container-login .login-header a {
   text-decoration: none;
 }
-
 .container-login h2 {
+  /*Modificando el encabezado YCOURSES*/
   text-align: center;
   font-weight: 900;
   font-size: 3em;
-  padding-top: .7em;
+  padding-top: 0.7em;
   margin-bottom: 1em;
   color: rgba(48, 0, 92, 0.8);
   text-transform: uppercase;
 }
-
 .container-login h2 .capital {
+  /*Cambiar de color la primera letra de la palabra YCOURSES*/
   color: black;
 }
-
 .container-login h2 .regular {
+  /*La palabra YCOURSES debe ir con el color primario del "logotipo"*/
   color: #ea5252;
 }
-
-.container-login input[type="email"],
-.container-login input[type="password"] {
+.container-login input[type=email],
+.container-login input[type=password] {
+  /*Aplicando estilos sobre campos del tipo email y password*/
   width: 100%;
   height: 3.5em;
   margin-bottom: 1em;
@@ -69,113 +183,97 @@ html {
   /*Configuracion de font*/
   color: #403866;
   background-color: #e6e6e6;
-  font-family: "Ubuntu", sans-serif;
+  font-family: Ubuntu, sans-serif;
   font-weight: bold;
   font-size: 1.3em;
   padding-left: 1.3em;
 }
-
-.container-login input[type="email"]:focus,
-.container-login input[type="password"]:focus {
+.container-login input[type=email]:focus,
+.container-login input[type=password]:focus {
+  /*Añadir bordes a los campos email y contraseña cuando los indico con el cursor*/
   border: 1px solid;
   border-color: #ea5252;
 }
-
-.container-login input[type="checkbox"] {
+.container-login input[type=checkbox] {
+  /*Aplicando estilos sobre campo checkbox "Recordarme"*/
   border-color: #ea5252;
   border-radius: 1px solid;
 }
-
-.container-login input[type="checkbox"] + label {
+.container-login input[type=checkbox] + label {
   color: rgba(119, 119, 119, 0.822);
   font-weight: bold;
 }
-
-.container-login input[type="submit"] {
+.container-login input[type=submit] {
+  /*Aplicando estilos sobre nuestro botón submit*/
   background-color: #ea5252;
   color: white;
   width: 100%;
   height: 3.5em;
   font-size: 1.3em;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   border-radius: 2px;
   cursor: pointer;
 }
+.container-login input[type=submit]:hover {
+  /*Efecto Fancy para cuando posemos el cursor sobre el botón de ingreso, la propiedad transition nos permite modificar la velocidad con la que el botón cambia de botón, en este caso los valores:
+  ".3s" nos indica que la animación durará 1/3 de segundo.
+  "all" debe aplicarse a todos los cambios que experimente este botón.
+  "ease" es el valor por defecto de esta propiedad, y nos indica que el efecto comienza lentamente para luego volverse rápido, y terminar de forma lenta. Puedes jugar con los valores para notar con facilidad como funciona.
 
-.container-login input[type="submit"]:hover {
+  */
   background-color: #992337;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
+  transition: 0.3s all ease;
 }
-
 .container-login .help-kit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 1.5em;
 }
-
 .container-login .help-kit .sub-help {
   display: -webkit-inline-box;
 }
-
 .container-login .help-kit .sub-help a {
   text-decoration: none;
-  font-family: "Ubuntu", sans-serif;
+  font-family: Ubuntu, sans-serif;
   color: #ea5252;
 }
-
 .container-login .help-kit .sub-help a:hover {
   text-decoration: underline;
 }
 
 /*desarrollo del footer*/
 .container-footer {
+  /*Establecemos los estilos para el footer de esta página*/
   border: 2px solid;
   border-color: rgba(128, 128, 128, 0.2);
   height: 5em;
   padding-top: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .container-footer h2 {
   font-size: 1em;
   color: gray;
 }
-
 .container-footer h2 a {
   color: steelblue;
 }
-
 .container-footer h2 a:hover {
   color: #3672a3;
 }
 
 .login-menu {
+  /*Estilos para el menú de botones para simular el ingreso a las distintas interfaces del sistema.*/
   margin-top: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-
 .login-menu a {
   text-decoration: none;
 }
-
 .login-menu .adm,
 .login-menu .usr,
 .login-menu .per {
@@ -183,38 +281,33 @@ html {
   height: 3vh;
   border: none;
   border-radius: 2px;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   color: white;
   cursor: pointer;
 }
-
 .login-menu .adm {
+  /*Personalización de botón de adminstración*/
   background-color: #0067bb;
 }
-
 .login-menu .adm:hover {
   background-color: #005194;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  transition: 0.2s all ease;
 }
-
 .login-menu .usr {
+  /*Personalización de botón de usuario*/
   background: #ea5252;
 }
-
 .login-menu .usr:hover {
   background-color: #992337;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  transition: 0.2s all ease;
 }
-
 .login-menu .per {
+  /*Personalización de botón de personal*/
   background-color: #403866;
 }
-
 .login-menu .per:hover {
   background-color: #2e2849;
-  -webkit-transition: .2s all ease;
-  transition: .2s all ease;
+  transition: 0.2s all ease;
 }
+
 /*# sourceMappingURL=login.css.map */
