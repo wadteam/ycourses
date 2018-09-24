@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/cuenta.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="div-container">
+        <ul>
+            <li>
+                <a href="">Pagina Principal</a>
+            </li>
+            <li>
+                <a href="">Crear Cuenta</a>
+            </li>
+            <li>
+                <a href="PerfilAlum.html">Perfil Personal</a>
+            </li>
+            <li>
+                <a href="">Mantenedores</a>
+            </li>
+            <li>
+                <a href="ingresar.html">Cerrar Session</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--  <div class="logo-1">
+         <div class="logo-2">
+           <img src="img/logo3.png">
+
+         </div>
+    </div> -->
+
+
+    <div class="ocultar">
+        <div class="padre">
+            <div class="hijo">
+                <!-- <fieldset> -->
+                <!--   <legend>Creación de cuentas</legend> -->
+                <br>
+                <div>
+                    <!--  <div>
+                        <td> <img src="agregar.jpg" alt="150" width="150"></td>
+                       <td></td><input type="file" id="imagen" value="Subir imagen"></td>
+
+                    </div> -->
+                    <div>
+
+                        <td> <label>Nombre :</label> </td>
+                        <td><input type="text" id="nombre" placeholder="Ingrese su nombre"></td>
+                    </div>
+                    <div>
+
+                        <td> <label>Apellido :</label> </td>
+                        <td> <input type="text" id="apellido" placeholder="Ingrese su apeliido"></td>
+                    </div>
+                    <div>
+                        <td> <label>Edad :</label></td>
+                        <td> <input type="number" id="Edad" min="18" max="64"></td>
+                    </div>
+                    <div>
+
+                        <td><label>Sexo :</label></td>
+                        <td> <label>Femenino</label> <input type="radio" name="sexo" value="Femenino" checked>
+                            <label>Masculino</label><input type="radio" name="sexo" value="Masculino"></td>
+                    </div>
+                    <div>
+                        <td></td>
+                    </div>
+                    <div>
+
+                        <td><label>Fecha de nacimiento</label></td>
+                        <td> <input type="date"></td>
+                    </div>
+                    <div>
+
+                        <td><label>Ciudad</label></td>
+                        <td><select name="ciudad">
+                                <option selected value="1">La Serena</option>
+                                <option value="2">Copiapo</option>
+                                <option value="3">Coquimbo</option>
+                            </select></td>
+                    </div>
+                    <div>
+
+                        <td> <label>Estado : </label></td>
+                        <td> <input type="checkbox" name="soltero" checked>Soltero
+                            <input type="checkbox" name="casado">Casado</td>
+                    </div>
+                    <div>
+
+                        <td> <label>Correo:</label></td>
+                        <td> <input type="email" placeholder="Ingrese Correo Electronico" require></td>
+                    </div>
+                    <div>
+
+                        <td> <label>Contraseña:</label></td>
+                        <td> <input type="password" placeholder="Ingrese contraseña" require></td>
+                    </div>
+                    <div>
+
+                        <td> <label>reingrese contraseña:</label></td>
+                        <td> <input type="password" placeholder="Ingrese contraseña nuevamente" require></td>
+                    </div>
+                    <div>
+
+                        <td> <input type="submit" value="guardar datos"></td>
+                        <td> <input type="reset" name="limpiar" value="Limpiar"></td>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <!--   </fieldset> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="mostrar">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>ciudad</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Nicolas</td>
+                <td>Escobar</td>
+                <td>21</td>
+                <td>La Serena</td>
+                <td>Nicolas@hotmail.com</td>
+            </tr>
+            <tr>
+                <td>edgardo</td>
+                <td>rodriguez</td>
+                <td>22</td>
+                <td>Coquimbo</td>
+                <td>Edgardo@hotmail.com</td>
+            </tr>
+            <tr>
+                <td>Tamara</td>
+                <td>iriarte</td>
+                <td>20</td>
+                <td>Copiapo</td>
+                <td>Tamara.I@live.cl</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+
+</body>
+
+</html>
