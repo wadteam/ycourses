@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Importando variables*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto");
 /*Fuentes */
 /*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
 Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
@@ -120,7 +121,124 @@ Debes tener en cuenta que las variables de colores, fuentes y cualquiera que ten
 */
 /*Colores primarios*/
 /*Colores secundarios*/
+/*Mod colores*/
+.color-calipso {
+  color: #1D96B2;
+}
+
+.color-info {
+  color: #3c91ff;
+}
+
+.color-warn {
+  color: #ea5252;
+}
+
+.color-naranjo {
+  clear: both;
+  color: #ff8000;
+}
+
+/*Bordes*/
+.bordes-calipso {
+  border: 1px solid #1D96B2;
+}
+
+.bordes-info {
+  border: 1px solid #3c91ff;
+}
+
+.bordes-warn {
+  border: 1px solid #ea5252;
+}
+
+.bordes-naranjo {
+  border: 1px solid #ff8000;
+}
+
+/*Titlers*/
+.titler-calipso,
+.titler-warn,
+.titler-info,
+.titler-naranjo {
+  width: 100%;
+  height: 3em;
+  border-radius: 3px 3px 0 0;
+}
+.titler-calipso .titler-header,
+.titler-warn .titler-header,
+.titler-info .titler-header,
+.titler-naranjo .titler-header {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.3em;
+}
+
+.titler-calipso {
+  background-color: #1D96B2;
+  color: #FFFFFF;
+}
+
+.titler-warn {
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+
+.titler-info {
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+
+.titler-naranjo {
+  background-color: #ff8000;
+  color: #FFFFFF;
+}
+
+/*Profiles*/
+.profile-cliente,
+.profile-empresa,
+.profile-serv,
+.profile-funcionario {
+  float: left;
+  height: 160px;
+  width: 160px;
+  border-radius: 90px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-cliente {
+  /*Estilos para perfil de usuario*/
+  /*Configuración de background*/
+  background-image: url(/images/profile-avatar.png);
+  background-color: #1D96B2;
+}
+
+.profile-empresa {
+  /*Estilos para perfil de empresa*/
+  /*Configuración de background*/
+  background-image: url(/images/businessman.png);
+  background-color: #ff8000;
+}
+
+.profile-funcionario {
+  /*Estilos para perfil de empresa*/
+  /*Configuración de background*/
+  background-image: url(/images/funcionario-icon.png);
+  background-color: #3c91ff;
+}
+
+.profile-serv {
+  /*Estilos para perfil de empresa*/
+  /*Configuración de background*/
+  background-image: url(/images/book-icon.png);
+  background-color: #ea5252;
+}
+
 /*
+
 *
 */
 * {
@@ -139,12 +257,12 @@ body {
 header {
   /*Personalización de la barra de navegación de administrador*/
 }
-header a.logo {
+header .logo {
   /*Aplicamos negritas al logotipo de la página web*/
   font-family: Montserrat-Bold, sans-serif;
 }
-header a.logo .capital,
-header a.logo .regular {
+header .logo .capital,
+header .logo .regular {
   /*La propiedad font-weight nos permite manejar que tan negrita queremos que sea nuestra fuente*/
   font-weight: 200;
 }
@@ -182,7 +300,7 @@ main {
 .content {
   /*Configuracion de layout
   dado que el ancho de nuestra página se debe adaptar a distintos tamaños, el ancho de este div debe ser dinámico (cambiante) para poder encajar junto a la barra de navegación de administración. Para eso utilizamos una herramienta muy útil de CSS: La función calc, siéntete libre de modificar sus valores para entender como funciona.*/
-  height: 1000px;
+  height: 100%;
   background-color: white;
   width: calc(100% - 12.5em);
   padding-right: 0;
@@ -197,7 +315,7 @@ main {
   font-size: 14px;
 }
 .side-bar::before {
-  /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 4 de su estándar.
+  /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 3 de su estándar.
   Básicamente sirven para manipular los elementos de nuestros documentos HTML o incluso añadir nuevos elementos que no estén especificados.
   *
   Si deseas conocer más al respecto:
@@ -267,6 +385,246 @@ main {
 }
 .side-bar li {
   position: relative;
+}
+
+.conter {
+  /*Contenedor estandar para main content interface administrador*/
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 2px;
+  padding: 1em 1em;
+  margin: 0.5em 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searcher {
+  justify-content: center;
+}
+
+.inputr {
+  padding-left: 1.5em;
+  font-size: 1.2em;
+  height: 2em;
+  width: 70%;
+  font-family: Ubuntu, sans-serif;
+  color: #3c91ff;
+}
+.inputr:focus {
+  border: 1px solid;
+  border-color: #3c91ff;
+}
+
+.submitr {
+  text-transform: uppercase;
+  width: 20%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 0 5px 5px 0;
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+.submitr:hover {
+  background-color: #367fdf;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+.tablr {
+  justify-content: center;
+}
+.tablr h2 {
+  font-family: Montserrat, sans-serif;
+  color: #1D96B2;
+}
+.tablr .tablr-header {
+  width: 60%;
+  margin-bottom: 1em;
+}
+.tablr .tablr-search {
+  width: 40%;
+  height: 2em;
+  display: flex;
+}
+.tablr .tablr-search input[type=text] {
+  font-family: Ubuntu, sans-serif;
+  font-size: 1em;
+  color: #303C49;
+}
+.tablr .tablr-search button {
+  width: 20%;
+  background-color: #1D96B2;
+  color: white;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.tablr .tablr-content {
+  width: 100%;
+}
+.tablr .tablr-btn {
+  width: 100%;
+  margin-top: 1em;
+  display: flex;
+  justify-content: end;
+}
+
+.pattern {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin: 0 1em;
+}
+.pattern .cruder-header {
+  width: 60%;
+  margin-bottom: 1em;
+  padding: 1em 1em;
+}
+.pattern .cruder-header h2 {
+  font-family: Montserrat, sans-serif;
+  color: #1D96B2;
+}
+
+.delimitador {
+  padding: 0 8em;
+}
+
+.cruder {
+  margin-top: 2em;
+  position: relative;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 7px;
+  border: 1px solid #1D96B2;
+  /**/
+}
+.cruder .profiler {
+  width: 100%;
+  display: inline-flex;
+  margin-bottom: 2em;
+}
+.cruder .content-cruder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cruder .content-cruder .btn {
+  padding: 0;
+  margin: 1em 0;
+  height: 3.2em;
+  width: 20%;
+}
+.cruder .content-cruder .btn.warn, .cruder .content-cruder .btn.warn-darken {
+  width: 40%;
+}
+.cruder .content-cruder .btn.naranjo {
+  width: 20%;
+}
+.cruder .input-cruder {
+  width: 100%;
+  height: 3em;
+  display: inline-flex;
+  margin: 1em 0;
+  font-family: Ubuntu, sans-serif;
+  color: #303C49;
+  font-size: 1em;
+  padding-left: 0.5em;
+}
+.cruder label {
+  color: #1D96B2;
+}
+.cruder hr {
+  margin: 1em 0;
+  color: rgba(128, 128, 128, 0.2);
+}
+
+.blank {
+  height: 3em;
+}
+
+.limitr {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin: 0 1em;
+}
+
+.reporter {
+  margin: 0;
+  border: none;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.reporter-pdf,
+.reporter-excel,
+.reporter-csv {
+  height: 180px;
+  width: 180px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 3px;
+}
+
+.rep,
+.ilustrador {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.rep {
+  display: inline-flex;
+  background-image: url(/images/pdf-icon.png);
+  height: 80%;
+  padding-top: 1em;
+}
+
+.ilustrador {
+  background-color: #992337;
+  height: 20%;
+  padding-top: 0.3em;
+}
+.ilustrador a {
+  color: white;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+}
+
+.reporter-pdf {
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+
+.reporter-excel {
+  background-color: #32CD27;
+  color: #FFFFFF;
+}
+.reporter-excel .rep {
+  background-image: url(/images/excel-icon2.png);
+}
+.reporter-excel .ilustrador {
+  background-color: #2cb323;
+}
+
+.reporter-csv {
+  background-color: #189E0E;
+  color: #FFFFFF;
+}
+.reporter-csv .rep {
+  background-image: url(/images/excel-icon.png);
+}
+.reporter-csv .ilustrador {
+  background-color: #158a0d;
+}
+
+.detallados {
+  width: 100%;
+  margin-top: 2em;
+}
+.detallados .btn {
+  height: 4em;
+  width: 30%;
+  margin-left: 0;
+  font-size: 1em;
+  background-color: #1D96B2;
 }
 
 /*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,116 @@
+/*Mod colores*/
+
+.color-calipso {
+    color: $calipso;
+}
+
+.color-info {
+    color: $calip;
+}
+
+.color-warn {
+    color: $primary;
+}
+
+.color-naranjo {
+    clear: both;
+    color: $naranjo;
+}
+
+/*Bordes*/
+
+.bordes-calipso {
+    border: 1px solid $calipso;
+}
+
+.bordes-info {
+    border: 1px solid $calip;
+}
+
+.bordes-warn {
+    border: 1px solid $primary;
+}
+
+.bordes-naranjo {
+    border: 1px solid $naranjo;
+}
+
+/*Titlers*/
+
+.titler-calipso,
+.titler-warn,
+.titler-info,
+.titler-naranjo {
+    width: 100%;
+    height: 3em;
+    border-radius: 3px 3px 0 0;
+    .titler-header {
+        padding-top: .5em;
+        padding-left: .5em;
+        font-family: $monty;
+        font-size: 1.3em;
+    }
+}
+
+.titler-calipso {
+    background-color: $calipso;
+    color: $blanco;
+}
+
+.titler-warn {
+    background-color: $primary;
+    color: $blanco;
+}
+
+.titler-info {
+    background-color: $calip;
+    color: $blanco;
+}
+
+.titler-naranjo {
+    background-color: $naranjo;
+    color: $blanco;
+}
+
+/*Profiles*/
+
+.profile-cliente,
+.profile-empresa,
+.profile-serv,
+.profile-funcionario {
+    float: left;
+    height: 160px;
+    width: 160px;
+    border-radius: 90px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.profile-cliente {
+    /*Estilos para perfil de usuario*/
+    /*Configuración de background*/
+    background-image: url(/images/profile-avatar.png);
+    background-color: $calipso;
+}
+
+.profile-empresa {
+    /*Estilos para perfil de empresa*/
+    /*Configuración de background*/
+    background-image: url(/images/businessman.png);
+    background-color: $naranjo;
+}
+
+.profile-funcionario {
+    /*Estilos para perfil de empresa*/
+    /*Configuración de background*/
+    background-image: url(/images/funcionario-icon.png);
+    background-color: $calip;
+}
+
+.profile-serv {
+    /*Estilos para perfil de empresa*/
+    /*Configuración de background*/
+    background-image: url(/images/book-icon.png);
+    background-color: $primary;
+}

@@ -184,6 +184,124 @@ header nav ul li.link-ingreso a:hover {
   background: #FFFFFF;
 }
 
+.btn {
+  /* Estilos para botones genéricos:
+  porfavor usar esta clase para confeccionar rápidamente
+  botones de cualquier tipo, junto a sus variaciones si así lo desea.*/
+  height: 3em;
+  width: 9em;
+  margin-left: 1.5em;
+  background: #3c91ff;
+  color: white;
+  border: none;
+  position: relative;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn.calipso {
+  /*variación para botones calipso*/
+  background-color: #1D96B2;
+  color: #FFFFFF;
+}
+.btn.naranjo {
+  /*variación para botones naranjos*/
+  background-color: #ff8000;
+  color: #FFFFFF;
+}
+.btn.warn {
+  /*variación para botones de advertencia*/
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+.btn.warn-darken {
+  /*variación para botones de advertencia*/
+  background-color: #992337;
+  color: #FFFFFF;
+}
+.btn.info {
+  /*variación para botones de advertencia*/
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+
+table {
+  /* estilo para tablas del panel de administración */
+  /*La estructura básica para las tablas (y sus variaciones) de la página web se encuentran en /sass/_tablas.scss, y son directamente invocadas
+  en /sass/principal.scss. Puedes consultar el resultado final en /css/principal.css 
+  Si deseas personalizar las tablas, puedes añadir:
+  .mod-calipso
+  .mod-info
+  .mod-warn
+  .mod-naranjo
+  */
+  margin-top: 2em;
+  display: table;
+  width: 100%;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  position: relative;
+  /*
+  */
+}
+table tr {
+  display: table-row;
+  font-family: Montserrat, sans-serif;
+}
+table tr:nth-child(2n-2) {
+  background: rgba(128, 128, 128, 0.2);
+}
+table th {
+  display: table-cell;
+  height: 3em;
+}
+table th:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.2);
+}
+table td {
+  height: 3em;
+  display: table-cell;
+}
+table.mod-calipso {
+  /*Modificacion calipso para las tablas*/
+  border: 1px solid #1D96B2;
+}
+table.mod-calipso tr:nth-child(2n-2) {
+  background-color: #e3e9fa;
+}
+table.mod-calipso th {
+  background-color: #1D96B2;
+  color: #FFFFFF;
+}
+table.mod-warn {
+  border: 1px solid #ea5252;
+}
+table.mod-warn tr:nth-child(2n-2) {
+  background-color: #ebd5eb;
+}
+table.mod-warn th {
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+table.mod-info {
+  border: 1px solid #3c91ff;
+}
+table.mod-info tr:nth-child(2n-2) {
+  background-color: #c6ebfc;
+}
+table.mod-info th {
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+table.mod-naranjo {
+  border: 1px solid #ff8000;
+}
+table.mod-naranjo tr:nth-child(2n-2) {
+  background-color: #ffe3a6;
+}
+table.mod-naranjo th {
+  background-color: #ff8000;
+  color: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;

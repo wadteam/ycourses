@@ -1,0 +1,39 @@
+.btn {
+    /* Estilos para botones genéricos:
+    porfavor usar esta clase para confeccionar rápidamente
+    botones de cualquier tipo, junto a sus variaciones si así lo desea.*/
+    height: 3em;
+    width: 9em;
+    margin-left: 1.5em;
+    background: $calip;
+    color: white;
+    border: none;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+    &.calipso {
+        /*variación para botones calipso*/
+        background-color: $calipso;
+        color: $blanco;
+    }
+    &.naranjo {
+        /*variación para botones naranjos*/
+        background-color: $naranjo;
+        color: $blanco;
+    }
+    &.warn {
+        /*variación para botones de advertencia*/
+        background-color: $primary;
+        color: $blanco;
+    }
+    &.warn-darken {
+        /*variación para botones de advertencia*/
+        background-color: $primary-darken;
+        color: $blanco;
+    }
+    &.info {
+        /*variación para botones de advertencia*/
+        background-color: $calip;
+        color: $blanco;
+    }
+}

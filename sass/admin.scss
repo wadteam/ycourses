@@ -1,11 +1,15 @@
 /*Importando variables*/
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
 @import "_fonts";
 @import "_colores";
+@import "_components";
 /*
+
 *
 */
-$hol:333;
+
+$def-border:1px solid $estructura;
 * {
     box-sizing: border-box;
     padding: 0;
@@ -21,7 +25,7 @@ body {
 
 header {
     /*Personalización de la barra de navegación de administrador*/
-    a.logo {
+    .logo {
         /*Aplicamos negritas al logotipo de la página web*/
         font-family: $monty-negrita;
         .capital,
@@ -65,7 +69,7 @@ main {
 .content {
     /*Configuracion de layout
     dado que el ancho de nuestra página se debe adaptar a distintos tamaños, el ancho de este div debe ser dinámico (cambiante) para poder encajar junto a la barra de navegación de administración. Para eso utilizamos una herramienta muy útil de CSS: La función calc, siéntete libre de modificar sus valores para entender como funciona.*/
-    height: 1000px;
+    height: 100%;
     background-color: white;
     width: calc(100% - 12.5em);
     padding-right: 0;
@@ -80,7 +84,7 @@ main {
     line-height: 1;
     font-size: 14px;
     &::before {
-        /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 4 de su estándar.
+        /*After & Before son pseudoelementos de CSS3, específicadas en el Módulo 3 de su estándar.
         Básicamente sirven para manipular los elementos de nuestros documentos HTML o incluso añadir nuevos elementos que no estén especificados.
         *
         Si deseas conocer más al respecto:
@@ -154,3 +158,247 @@ main {
         position: relative;
     }
 }
+
+.conter {
+    /*Contenedor estandar para main content interface administrador*/
+    border: $def-border;
+    border-radius: 2px;
+    padding: 1em 1em;
+    margin: .5em 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.searcher {
+    justify-content: center;
+}
+
+.inputr {
+    //height de la clase inputr también define la altura de su clase hermana: submitr
+    padding-left: 1.5em;
+    font-size: 1.2em;
+    height: 2em;
+    width: 70%;
+    font-family: $ubuntu;
+    color: $calip;
+    &:focus {
+        border: 1px solid;
+        border-color: $calip;
+    }
+}
+
+.submitr {
+    text-transform: uppercase;
+    width: 20%;
+    border: $def-border;
+    border-radius: 0 5px 5px 0;
+    background-color: $calip;
+    color: $blanco;
+    &:hover {
+        background-color: $calip-darken;
+        transition: .2s all ease;
+        cursor: pointer;
+    }
+}
+
+.tablr {
+    justify-content: center;
+    h2 {
+        font-family: $monty;
+        color: $calipso;
+    }
+    .tablr-header {
+        width: 60%;
+        margin-bottom: 1em;
+    }
+    .tablr-search {
+        width: 40%;
+        height: 2em;
+        display: flex;
+        input[type="text"] {
+            font-family: $ubuntu;
+            font-size: 1em;
+            color: $links;
+        }
+        button {
+            width: 20%;
+            background-color: #1D96B2;
+            color: white;
+            border: none;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+        }
+    }
+    .tablr-content {
+        width: 100%;
+    }
+    .tablr-btn {
+        width: 100%;
+        margin-top: 1em;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.pattern {
+    border: $def-border;
+    margin: 0 1em;
+    .cruder-header {
+        width: 60%;
+        margin-bottom: 1em;
+        padding: 1em 1em;
+        h2 {
+            font-family: $monty;
+            color: $calipso;
+        }
+    }
+}
+
+.delimitador {
+    padding: 0 8em;
+}
+
+.cruder {
+    margin-top: 2em;
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 7px;
+    border: 1px solid $calipso;
+    .profiler {
+        width: 100%;
+        display: inline-flex;
+        margin-bottom: 2em;
+    }
+    
+    .content-cruder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .btn {
+            padding: 0;
+            margin: 1em 0;
+            height: 3.2em;
+            width: 20%;
+            &.warn,
+            &.warn-darken {
+                width: 40%;
+            }
+            &.naranjo {
+                width: 20%;
+            }
+        }
+    }
+    /**/
+    .input-cruder {
+        width: 100%;
+        height: 3em;
+        display: inline-flex;
+        margin: 1em 0;
+        font-family: $ubuntu;
+        color: $links;
+        font-size: 1em;
+        padding-left: .5em;
+    }
+    label {
+        color: $calipso;
+    }
+    hr {
+        margin: 1em 0;
+        color: $estructura;
+    }
+}
+
+.blank {
+    height: 3em;
+}
+
+.limitr {
+    border: $def-border;
+    margin: 0 1em;
+}
+
+.reporter {
+    margin: 0;
+    border: none;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.reporter-pdf,
+.reporter-excel,
+.reporter-csv {
+    height: 180px;
+    width: 180px;
+    border: $def-border;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.rep,
+.ilustrador {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.rep {
+    display: inline-flex;
+    background-image: url(/images/pdf-icon.png);
+    height: 80%;
+    padding-top: 1em;
+}
+
+.ilustrador {
+    background-color: $primary-darken;
+    height: 20%;
+    padding-top: .3em;
+    a {
+        color: white;
+        text-decoration: none;
+        font-family: $monty;
+    }
+}
+
+.reporter-pdf {
+    background-color: $primary;
+    color: $blanco;
+}
+
+.reporter-excel {
+    background-color: #32CD27;
+    color: $blanco;
+    .rep {
+        background-image: url(/images/excel-icon2.png);
+    }
+    .ilustrador {
+        background-color: rgb(44, 179, 35);
+    }
+}
+
+.reporter-csv {
+    background-color: #189E0E;
+    color: $blanco;
+    .rep {
+        background-image: url(/images/excel-icon.png);
+    }
+    .ilustrador {
+        background-color: #158a0d;
+    }
+}
+
+.detallados {
+    width: 100%;
+    margin-top: 2em;
+    .btn {
+        height: 4em;
+        width: 30%;
+        margin-left: 0;
+        font-size: 1em;
+        background-color: $calipso;
+    }
+}
+

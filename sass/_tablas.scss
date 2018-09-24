@@ -1,0 +1,77 @@
+table {
+    /* estilo para tablas del panel de administración */
+    /*La estructura básica para las tablas (y sus variaciones) de la página web se encuentran en /sass/_tablas.scss, y son directamente invocadas
+    en /sass/principal.scss. Puedes consultar el resultado final en /css/principal.css 
+    Si deseas personalizar las tablas, puedes añadir:
+    .mod-calipso
+    .mod-info
+    .mod-warn
+    .mod-naranjo
+    */
+    margin-top: 2em;
+    display: table;
+    width: 100%;
+    border: 2px solid $estructura;
+    position: relative;
+    tr {
+        display: table-row;
+        font-family: $monty;
+        &:nth-child(2n-2) {
+            background: $estructura;
+        }
+    }
+    th {
+        display: table-cell;
+        height: 3em;
+        &:nth-child(odd) {
+            background: $estructura;
+        }
+    }
+    td {
+        height: 3em;
+        display: table-cell;
+    }
+    /*
+    */
+    &.mod-calipso {
+        /*Modificacion calipso para las tablas*/
+        border: 1px solid $calipso;
+        tr:nth-child(2n-2) {
+            background-color: #e3e9fa;
+        }
+        th {
+            background-color: $calipso;
+            color: $blanco;
+        }
+    }
+    &.mod-warn {
+        border: 1px solid $primary;
+        tr:nth-child(2n-2) {
+            background-color: #ebd5eb;
+        }
+        th {
+            background-color: $primary;
+            color: $blanco;
+        }
+    }
+    &.mod-info {
+        border: 1px solid $calip;
+        tr:nth-child(2n-2) {
+            background-color: #c6ebfc;
+        }
+        th {
+            background-color: $calip;
+            color: $blanco;
+        }
+    }
+    &.mod-naranjo {
+        border: 1px solid $naranjo;
+        tr:nth-child(2n-2) {
+            background-color: #ffe3a6;
+        }
+        th {
+            background-color: $naranjo;
+            color: $blanco;
+        }
+    }
+}
