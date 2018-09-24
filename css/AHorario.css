@@ -1,0 +1,130 @@
+/*@import url('https://fonts.googleapis.com/css?family=Oswald:200,400,600,700');
+*/
+body, html{
+    font-family: 'Roboto', sans-serif;
+    }
+    /*fixed deja pegado un elemento o div en la pantalla 
+      static se acomoda a las reglas de navegador por defecto
+      float se acomoda con rigth o left
+      el posicionamiento de la caja se realiza con position
+      color = color de las letras
+      backgraund = color body o fondo
+      margin : toma margen hacia todos los lados  en caso de que se ingrese otro px despues se le dara a la parte izquierda
+    
+    
+    */
+    /* se le dara color gradiente al body*/
+    body{
+    background: rgba(248,80,50,1);
+    background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(50%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
+    background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
+    background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
+    background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+      /*
+      background: rgba(212,228,239,1);
+      background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+      background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+      background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+      background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+      background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+      */ 
+      /*
+        background: #dbd52b;
+       
+        background: -moz-linear-gradient(left, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+     
+        background: -webkit-linear-gradient(left, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+      
+        background: linear-gradient(to right, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+    
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd52b', endColorstr='#db13d4', GradientType=1);
+       */ 
+    }
+    
+    
+    #div-container{
+        background:rgb(206, 74, 51);
+        text-align: center;
+        position: absolute;
+        display: inline-block;
+        width: 99%;
+        height: 89px;
+        
+    
+        /*IMPORTANTE*/
+     /*   display: block;
+        justify-content: center;
+        align-items: center; 
+        height: 150px;
+        width: 10%;
+        height: 950px;
+        background-color: rgb(22, 71, 73);
+        border-radius: 10px;
+        position: fixed;
+        margin: 0;
+        padding: 0;*/
+       /*
+         background: #dbd52b;
+         
+         background: -moz-linear-gradient(left, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+       
+         background: -webkit-linear-gradient(left, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+       
+         background: linear-gradient(to right, #dbd52b 0%, #d67022 41%, #e22b2e 57%, #db13d4 100%);
+       
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd52b', endColorstr='#db13d4', GradientType=1);
+        */
+    }
+    
+    #div-container ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: #aaa;
+        display: inline-block;
+      
+    }
+    
+    #div-container ul li{
+        display: block;
+        border-bottom: #aaa;
+        font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: inline-block;
+        
+    }
+    #div-container ul li a{
+      border-bottom: #aaa;
+    
+        color: white;
+        display: block;
+        padding: 30px;
+        text-decoration: none;
+        font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    
+      }
+    #div-container ul li a:hover{
+       /*  background-color: rgb(126, 175, 162);
+         border-bottom: 9x solid black;
+         display: inline-block; */
+         background-color: #c53c1a;
+         margin-top:-2px;
+         padding-bottom:62px;
+    
+        }
+        /*AQUI TERMINA EL NAV*/
+        /*Comienza css perfil de usuario*/
+        .Padre{
+            position: absolute;
+            left:49.5%;
+            top: 22.5%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            height: 180px;
+           border-radius: 5px;
+        }

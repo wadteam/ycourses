@@ -1,0 +1,80 @@
+body{
+    background-color: white;
+}
+.Padre{
+    position: absolute;
+    left:50.5%;
+    top: 10.5%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    height: 180px;
+
+}
+.hijo {
+    background-color:
+      white; 
+    font-family: 'Roboto', sans-serif;
+    border-radius: 7px;
+    height: 430px;
+    width: 600px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+.hijo .login-header a {
+    text-decoration: none;
+  }
+ .hijo h2 {
+  
+    text-align: center;
+    font-weight: 900;
+    font-size: 3em;
+    padding-top: 0.7em;
+    margin-bottom: 1em;
+    color: rgba(48, 0, 92, 0.8);
+    text-transform: uppercase;
+  }
+ .hijo  h2 .capital {
+  
+    color: black;
+  }
+ .hijo  h2 .regular {
+  
+    color: #ea5252;
+  }
+
+input{
+    width: 100%;
+    height: 3.5em;
+    margin-bottom: 1em;
+    border-radius: 3px;
+    border: 0px solid;
+    /*Configuracion de font*/
+    color: #403866;
+    background-color: #e6e6e6;
+    font-family: Ubuntu, sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-left: 1.3em;
+}
+
+.hijo input [type="submit"]{
+
+    background-color: #ea5252;
+    color: white;
+    width: 100%;
+    height: 3.5em;
+    font-size: 1.3em;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+  
+    background-color: #992337;
+    transition: 0.3s all ease;
+  }
