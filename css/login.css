@@ -38,20 +38,19 @@ https://www.fontsquirrel.com/
 *
 */
 /*Ubuntu*/
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Ubuntu;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
 }
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Bold;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Light;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
@@ -59,19 +58,16 @@ https://www.fontsquirrel.com/
 /**/
 /*Montserrat*/
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Montserrat;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 }
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Montserrat-Bold;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
 }
 @font-face {
-  /*Deepest Possible Browser Support*/
   font-family: Montserrat-Black;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");

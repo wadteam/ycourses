@@ -1,6 +1,5 @@
 /*Importando variables*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
 @import "_fonts";
 @import "_colores";
 @import "_components";
@@ -167,7 +166,12 @@ main {
     margin: .5em 1em;
     display: flex;
     flex-wrap: wrap;
+    &.otro{
+        flex-direction: column;
+        
+    }
 }
+
 
 .searcher {
     justify-content: center;
@@ -270,7 +274,6 @@ main {
         display: inline-flex;
         margin-bottom: 2em;
     }
-    
     .content-cruder {
         width: 100%;
         display: flex;
