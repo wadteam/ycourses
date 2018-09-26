@@ -1,24 +1,6 @@
+@charset "UTF-8";
 /*Fuentes */
 /*Ubuntu*/
-<<<<<<< HEAD
-@font-face {
-    /*Deepest Possible Browser Support*/
-    font-family: Ubuntu;
-    /* Safari, Android, iOS */
-    src: url('../fonts/roboto/Roboto-Medium.ttf') format('truetype'), /*Formato para navegadores modernoss */
-}
-@font-face {
-    /*Deepest Possible Browser Support*/
-    font-family: Ubuntu-Bold;
-    /* Safari, Android, iOS */
-    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
-}
-@font-face {
-    /*Deepest Possible Browser Support*/
-    font-family: Ubuntu-Light;
-    /* Safari, Android, iOS */
-    src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), /*Formato para navegadores modernoss */
-=======
 /*Fuentes */
 /*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
 Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
@@ -74,29 +56,10 @@ https://www.fontsquirrel.com/
   font-family: Ubuntu-Light;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
->>>>>>> parent of b3ae34a... Update Admin
 }
 /**/
 /*Montserrat*/
 @font-face {
-<<<<<<< HEAD
-    /*Deepest Possible Browser Support*/
-    font-family: Montserrat;
-    /* Safari, Android, iOS */
-    src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), /*Formato para navegadores modernoss */
-}
-@font-face {
-    /*Deepest Possible Browser Support*/
-    font-family: Montserrat-Bold;
-    /* Safari, Android, iOS */
-    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), /*Formato para navegadores modernoss */
-}
-@font-face {
-    /*Deepest Possible Browser Support*/
-    font-family: Montserrat-Black;
-    /* Safari, Android, iOS */
-    src: url('/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype'), /*Formato para navegadores modernoss */
-=======
   /*Deepest Possible Browser Support*/
   font-family: Montserrat;
   /* Safari, Android, iOS */
@@ -215,156 +178,238 @@ header nav ul li.link-ingreso {
 header nav ul li.link-ingreso a {
   color: #ea5252;
   font-family: Montserrat-Bold, sans-serif;
->>>>>>> parent of b3ae34a... Update Admin
 }
+header nav ul li.link-ingreso a:hover {
+  color: #992337;
+  background: #FFFFFF;
+}
+
+.btn {
+  /* Estilos para botones genéricos:
+  porfavor usar esta clase para confeccionar rápidamente
+  botones de cualquier tipo, junto a sus variaciones si así lo desea.*/
+  height: 3em;
+  width: 9em;
+  margin-left: 1.5em;
+  background: #3c91ff;
+  color: white;
+  border: none;
+  position: relative;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn.calipso {
+  /*variación para botones calipso*/
+  background-color: #1D96B2;
+  color: #FFFFFF;
+}
+.btn.naranjo {
+  /*variación para botones naranjos*/
+  background-color: #ff8000;
+  color: #FFFFFF;
+}
+.btn.warn {
+  /*variación para botones de advertencia*/
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+.btn.warn-darken {
+  /*variación para botones de advertencia*/
+  background-color: #992337;
+  color: #FFFFFF;
+}
+.btn.info {
+  /*variación para botones de advertencia*/
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+
+table {
+  /* estilo para tablas del panel de administración */
+  /*La estructura básica para las tablas (y sus variaciones) de la página web se encuentran en /sass/_tablas.scss, y son directamente invocadas
+  en /sass/principal.scss. Puedes consultar el resultado final en /css/principal.css 
+  Si deseas personalizar las tablas, puedes añadir:
+  .mod-calipso
+  .mod-info
+  .mod-warn
+  .mod-naranjo
+  */
+  margin-top: 2em;
+  display: table;
+  width: 100%;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  position: relative;
+  /*
+  */
+}
+table tr {
+  display: table-row;
+  font-family: Montserrat, sans-serif;
+}
+table tr:nth-child(2n-2) {
+  background: rgba(128, 128, 128, 0.2);
+}
+table th {
+  display: table-cell;
+  height: 3em;
+}
+table th:nth-child(odd) {
+  background: rgba(128, 128, 128, 0.2);
+}
+table td {
+  height: 3em;
+  display: table-cell;
+}
+table.mod-calipso {
+  /*Modificacion calipso para las tablas*/
+  border: 1px solid #1D96B2;
+}
+table.mod-calipso tr:nth-child(2n-2) {
+  background-color: #e3e9fa;
+}
+table.mod-calipso th {
+  background-color: #1D96B2;
+  color: #FFFFFF;
+}
+table.mod-warn {
+  border: 1px solid #ea5252;
+}
+table.mod-warn tr:nth-child(2n-2) {
+  background-color: #ebd5eb;
+}
+table.mod-warn th {
+  background-color: #ea5252;
+  color: #FFFFFF;
+}
+table.mod-info {
+  border: 1px solid #3c91ff;
+}
+table.mod-info tr:nth-child(2n-2) {
+  background-color: #c6ebfc;
+}
+table.mod-info th {
+  background-color: #3c91ff;
+  color: #FFFFFF;
+}
+table.mod-naranjo {
+  border: 1px solid #ff8000;
+}
+table.mod-naranjo tr:nth-child(2n-2) {
+  background-color: #ffe3a6;
+}
+table.mod-naranjo th {
+  background-color: #ff8000;
+  color: #FFFFFF;
+}
+
+/*Editando perfiles*/
+.limiter-perfil,
+.card-perfil,
+.header-perfil,
+.main-perfil {
+  width: 100%;
+}
+
+.limiter-perfil {
+  padding: 0 4em 2em 4em;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.card-perfil {
+  display: flex;
+  flex: 1 0 44em;
+  flex-direction: column;
+  height: 900px;
+  max-height: 1200px;
+  background-color: white;
+}
+
+.header-perfil {
+  height: 20%;
+  min-height: 15em;
+  max-height: 40em;
+  background-color: #1D96B2;
+  opacity: 0.7;
+}
+.header-perfil .limiter-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  height: 100%;
+}
+.header-perfil .header-perfil-icon {
+  display: inline-flex;
+  height: 180px;
+  min-width: 3em;
+  width: 180px;
+  min-width: 3em;
+  background-image: url(/images/admin-profile.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 90px;
+  background-color: white;
+}
+
+.main-perfil {
+  border: 1px solid black;
+  height: 80%;
+  width: 100%;
+}
+.main-perfil .container-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.main-perfil .input-perfil {
+  width: 80%;
+  height: 3em;
+  display: inline-flex;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-    font-family: Montserrat, sans-serif;
-    font-weight: 300;
-    background-color: #EFEFEF;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  background-color: #EFEFEF;
 }
 
 /*Para la lista de links: sin estilo para links*/
-
-ul {
-    list-style-type: none;
-}
-
 /*Selector del header*/
-
-header {
-    /*background-color: #303C49;*/
-    background-color: #FFFFFF;
-    /*Display grid para posicionamiento de los links*/
-    display: grid;
-    /*Espaciado entre links utilizando la propiedad grid*/
-    grid-template-columns: 30% auto;
+main {
+  /*Aplicando estilos al contenido main*/
+}
+main .container {
+  /*Contenedor principal */
+  position: absolute;
+  background-color: #455668;
+  width: 100%;
+}
+main .card {
+  /*Simulando componente card de bootstrap 4*/
+  width: 100%;
+  position: relative;
+}
+main .image img {
+  /* Modificando los atributos de la imagen principal del card */
+  background-size: contain;
+  background-attachment: fixed;
+  height: 80%;
+  width: 100%;
 }
 
-/*Selector para Links del header*/
-
-header a {
-    color: #303C49;
-    /*color: white;*/
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-h1 {
-    margin-bottom: 1em;
-}
-
-/*Logo, con medidas dinámicas para diseño responsivo*/
-
-.logo {
-    font-weight: bold;
-    font-size: 1.3em;
-    padding: 1.5em 0 0 2em;
-    margin: 0;
-}
-
-/*Personalización del logo*/
-
-.logo span.capital {
-    color: black;
-}
-
-.logo span.regular {
-    color: rgb(234, 82, 82);
-}
-
-/*justificado de la lista de navegación*/
-
-nav {
-    justify-self: right;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    padding: 2em;
-    display: inline-block;
-}
-
-/*Efecto de colores que cambia con el desplazamiento del cursor*/
-
-nav ul li a:hover {
-    background: rgb(226, 226, 226);
-    transition: .3s ease all;
-}
-
-nav ul li:nth-child(4) {
-    padding-right: 2em;
-}
-
-nav.loc ul li:nth-child(4) a {
-    color: rgb(234, 82, 82);
-    font-weight: bold;
-}
-
-nav.loc  ul li:nth-child(4) a:hover {
-    color: rgb(153, 35, 55);
-    background: #fff;
-}
-
-nav.zen ul li:nth-child(4) a:hover {
-    
-}
-nav.adm-nav ul li:nth-child(4) span  {
-    height: 10px;
-}
-
-.job-container,
-.job-container2 {
-    background: white;
-    border-radius: 7px;
-    padding: 1em;
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: 120px auto;
-}
-
-.blank {
-    width: 100px;
-    height: 100px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-}
-
-.container.regular {
-    /*Calculando los margenes, 2em por lado siguiendo principios de diseño*/
-    width: calc(100% - 4em);
-    padding: 2em;
-    margin-top: 2em;
-    position: absolute;
-}
-
-.container {
-    position: absolute;
-    background-color: #455668;
-    width: 100%;
-}
-
-.card {
-    width: 100%;
-    position: relative;
-}
-
-.image img {
-    background-size: contain;
-    background-attachment: fixed;
-    height: 80%;
-    width: 100%;
-}
+/*# sourceMappingURL=principal.css.map */

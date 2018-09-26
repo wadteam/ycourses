@@ -1,0 +1,71 @@
+/*Editando perfiles*/
+
+.limiter-perfil,
+.card-perfil,
+.header-perfil,
+.main-perfil {
+    width: 100%;
+}
+
+.limiter-perfil {
+    padding: 0 4em 2em 4em;
+    height: 100%;
+    background-color: $blanco;
+}
+
+.card-perfil {
+    display: flex;
+    flex: 1 0 44em;
+    flex-direction: column;
+    height: 900px;
+    max-height: 1200px;
+    background-color: white;
+}
+
+.header-perfil {
+    height: 20%;
+    min-height: 15em;
+    max-height: 40em;
+    background-color: $calipso;
+    opacity: .7;
+    .limiter-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+        height: 100%;
+    }
+    .header-perfil-icon {
+        display: inline-flex;
+        height: 180px;
+        min-width: 3em;
+        width: 180px;
+        min-width: 3em;
+        background-image: url(/images/admin-profile.gif);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        border-radius: 90px;
+        background-color: white;
+    }
+}
+
+.main-perfil {
+    border: 1px solid black;
+    height: 80%;
+    width: 100%;
+    
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .input-perfil {
+        
+        width: 80%;
+        height: 3em;
+        display: inline-flex;
+    }
+}
