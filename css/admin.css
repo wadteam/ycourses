@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*Importando variables*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto");
 /*Fuentes */
 /*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
 Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
@@ -38,19 +39,20 @@ https://www.fontsquirrel.com/
 *
 */
 /*Ubuntu*/
-@import url("https://fonts.googleapis.com/css?family=Lato");
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Ubuntu;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
 }
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Bold;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Ubuntu-Light;
   /* Safari, Android, iOS */
   src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
@@ -58,16 +60,19 @@ https://www.fontsquirrel.com/
 /**/
 /*Montserrat*/
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Montserrat;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 }
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Montserrat-Bold;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
 }
 @font-face {
+  /*Deepest Possible Browser Support*/
   font-family: Montserrat-Black;
   /* Safari, Android, iOS */
   src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
@@ -232,100 +237,6 @@ Debes tener en cuenta que las variables de colores, fuentes y cualquiera que ten
   background-color: #ea5252;
 }
 
-.searchr {
-  margin: 1em 0 2em 0.8em;
-  height: 2.6em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.searchr .inputr {
-  color: #303C49;
-}
-.searchr .inputr:focus {
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  transition: 0.2s all ease;
-}
-.searchr .btnr {
-  height: 93%;
-  border: none;
-  border-radius: 0 10px 10px 0;
-  width: 4em;
-  background-color: rgba(128, 128, 128, 0.2);
-  color: #000000;
-  cursor: pointer;
-}
-.searchr .btnr:hover {
-  background-color: #303C49;
-  transition: 0.2s all ease;
-}
-
-.searchr.calipso .inputr:focus {
-  border: 1px solid #1D96B2;
-}
-.searchr.calipso .btnr {
-  background-color: #1D96B2;
-  color: #FFFFFF;
-}
-.searchr.calipso .btnr:hover {
-  background-color: #0e8ca8;
-}
-
-.searchr.info .inputr:focus {
-  border: 1px solid #3c91ff;
-}
-.searchr.info .btnr {
-  background-color: #3c91ff;
-  color: #FFFFFF;
-}
-.searchr.info .btnr:hover {
-  background-color: #367fdf;
-}
-
-.searchr.warn .inputr:focus {
-  border: 1px solid #ea5252;
-}
-.searchr.warn .btnr {
-  background-color: #ea5252;
-  color: #FFFFFF;
-}
-.searchr.warn .btnr:hover {
-  background-color: #992337;
-}
-
-.searchr.naranjo .inputr:focus {
-  border: 1px solid #ff8000;
-}
-.searchr.naranjo .btnr {
-  background-color: #ff8000;
-  color: #FFFFFF;
-}
-.searchr.naranjo .btnr:hover {
-  background-color: #d3560e;
-}
-
-.selectr {
-  justify-content: center;
-  align-content: center;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  padding: 0 5em 0 5em;
-}
-.selectr .selectr-item {
-  height: 2.3em;
-  position: relative;
-  width: 100%;
-  font-size: 1rem;
-}
-
-.btn.larger {
-  height: 4em;
-  width: 30%;
-  max-width: 20em;
-  min-width: 9em;
-  margin-bottom: 1.3em;
-}
-
 /*
 
 *
@@ -484,9 +395,6 @@ main {
   margin: 0.5em 1em;
   display: flex;
   flex-wrap: wrap;
-}
-.conter.otro {
-  flex-direction: column;
 }
 
 .searcher {

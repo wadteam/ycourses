@@ -1,5 +1,6 @@
 /*Fuentes */
 /*Ubuntu*/
+<<<<<<< HEAD
 @font-face {
     /*Deepest Possible Browser Support*/
     font-family: Ubuntu;
@@ -17,10 +18,68 @@
     font-family: Ubuntu-Light;
     /* Safari, Android, iOS */
     src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), /*Formato para navegadores modernoss */
+=======
+/*Fuentes */
+/*Variables ubicadas en /sass/_fuentes.scss que hacen referencia a TODAS las fuentes que se utilizan en este proyecto. 
+Esto permite una reutilización y manejo eficiente del código ( ya que de otra forma tendríamos que llamar a la función font-face en cada archivo que deseemos trabajar y que haga uso de ellas.
+El uso y manejo de variables de hojas de estilos es una de las de las características del precompilador SASS.
+* 
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*
+*/
+/*
+*
+Las variables que contienen todas las fuentes del proyecto se encuentran contenidas en /sass/_fuentes.scss.
+*
+Si deseas cambiar o agregar las fuentes existentes de este proyecto te recomiendo algunas herramientas web para ello:
+*
+1. Catálogo Google Fonts:
+http://fonts.google.com/
+*
+2. Catálogo Google Fonts 2:
+https://www.fonts.com/web-fonts/google?showGoogleFontsDialog
+*
+3. Catálogo Fonts.com:
+https://www.fonts.com/
+*
+4. Catálogo Font Squirrel:
+https://www.fontsquirrel.com/
+*
+*/
+/*Ubuntu*/
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu-Bold;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Ubuntu-Light;
+  /* Safari, Android, iOS */
+  src: url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+>>>>>>> parent of b3ae34a... Update Admin
 }
 /**/
 /*Montserrat*/
 @font-face {
+<<<<<<< HEAD
     /*Deepest Possible Browser Support*/
     font-family: Montserrat;
     /* Safari, Android, iOS */
@@ -37,6 +96,126 @@
     font-family: Montserrat-Black;
     /* Safari, Android, iOS */
     src: url('/fonts/Montserrat/Montserrat-BlackItalic.ttf') format('truetype'), /*Formato para navegadores modernoss */
+=======
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Bold;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  /*Deepest Possible Browser Support*/
+  font-family: Montserrat-Black;
+  /* Safari, Android, iOS */
+  src: url("/fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+}
+/*Instanciados */
+/*
+* 
+En /sass/_colores.scss se almacena toda la paleta de colores de este sitio web (es decir, sus códigos RGB, RGBA, HEX, entre otros y sus respectivas variables contenedoras), para ser posteriormente utilizadas en las hojas .scss ubicadas en la carpeta /sass. 
+Esto debido a que este proyecto hace uso de un precompilador de hojas de estilos llamado SAAS, una técnica muy utilizada para hacer uso eficiente del código css de proyectos extensos.
+*
+A pesar de esto los resultados finales (que son los que el navegador "lee") siempre quedan guardados en los archivos con extensión css.
+*
+Siéntete libre de modificar los archivos CSS si así lo deseas.
+*
+Si deseas consultar documentación del precompilador SASS y relacionados porfavor visita:
+*
+1. Documentación alternativa en inglés
+https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0
+*
+2. Documentación Oficial de SASS en inglés:
+https://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*
+3. Tutorial MUY RECOMENDADO de SASS en español:
+https://www.youtube.com/watch?v=Nro1WwTdCK4&index=1&list=PLPl81lqbj-4I4VwUdjbV2iFg7wispiXKP
+*
+*******************************************************************
+*
+Si deseas modificar la paleta de colores, te recomiendo de hacer uso de las diferentes herramientas en la red:
+*
+1. Gama de Paletas de colores ColorHunt:
+https://colorhunt.co/
+*
+2. Generador de paleta de colores a partir de imágenes CANVA:
+https://www.canva.com/color-palette/
+*
+3. Paleta de colores Material Design:
+https://material.io/tools/color/#!/?view.left=0&view.right=0
+*
+4. Gradientes UIGradients:
+https://uigradients.com/#Nighthawk
+*
+5. Generador de gradientes CSS Matic:
+https://cssmatic.com/gradient-generator
+*
+Debes tener en cuenta que las variables de colores, fuentes y cualquiera que tengas en mente solo pueden ser usadas en archivos con extensión .SCSS
+*/
+/*Colores primarios*/
+/*Colores secundarios*/
+header {
+  /* Aplicando estilos al header y su navbar principal*/
+  background-color: #FFFFFF;
+  /*Display grid para posicionamiento de los links*/
+  display: grid;
+  /*Espaciado entre links utilizando la propiedad grid*/
+  grid-template-columns: 30% auto;
+}
+header a {
+  /*Personalizacion de los links del navbar*/
+  color: #303C49;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header h1 {
+  /*Selector para Links del header*/
+  margin-bottom: 1em;
+}
+header .logo {
+  /*Logo, con medidas dinámicas para diseño responsivo*/
+  /*Personalización del logo*/
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1.5em 0 0 2em;
+  margin: 0;
+  font-family: Montserrat-Bold, sans-serif;
+  color: #ea5252;
+}
+header .logo::first-letter {
+  color: black;
+}
+header nav {
+  /*justificado con alineación a la derecha de la lista de navegación*/
+  justify-self: right;
+}
+header nav ul {
+  list-style-type: none;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  padding: 2em;
+  padding-top: 2em;
+  display: inline-block;
+}
+header nav ul li a:hover {
+  /*Efecto de colores que cambia con el desplazamiento del cursor*/
+  background: #e2e2e2;
+  transition: 0.3s ease all;
+}
+header nav ul li.link-ingreso {
+  padding-right: 2em;
+}
+header nav ul li.link-ingreso a {
+  color: #ea5252;
+  font-family: Montserrat-Bold, sans-serif;
+>>>>>>> parent of b3ae34a... Update Admin
 }
 * {
     margin: 0;
