@@ -158,7 +158,7 @@ main {
         position: relative;
     }
 }
-
+/*FIXME:*/
 .conter {
     /*Contenedor estandar para main content interface administrador*/
     border: $def-border;
@@ -167,7 +167,126 @@ main {
     margin: .5em 1em;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    &.gray {
+        border: none;
+        background-color: $estructura;
+    }
+    .charts {
+        flex-wrap: nowrap;
+        justify-content: inherit;
+    }
 }
+
+.grapher {
+    display: inline-flex;
+    width: 18em;
+    height: 8em;
+    border: $def-border;
+    margin-right: 1em;
+}
+
+.contenedor-icon {
+    width: 8em;
+    height: 8em;
+    display: block;
+    &.visitas {
+        background-color: $primary;
+    }
+    &.usuarios {
+        background-color: $calipso;
+    }
+    &.cursos {
+        background-color: $naranjo;
+    }
+}
+
+.grapher-icon {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/estadistica.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.visitas {
+        background-image: url(/images/eyewatch.png);
+        background-color: $primary;
+        width: 80%;
+        margin-left: .8em;
+    }
+    &.usuarios {
+        background-image: url(/images/User_icon_white.png);
+        background-color: $calipso;
+        height: 80%;
+        margin-top: .7em;
+    }
+    &.cursos {
+        background-color: $naranjo;
+        background-image: url(/images/book-white.png);
+        width: 75%;
+        margin-left: .9em;
+    }
+}
+
+.grapher-content {
+    width: 10em;
+    height: 8em;
+    background-color: $blanco;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 3em 0 1em 0;
+    div {
+        display: inline-flex;
+        font-family: $monty-negrita;
+    }
+    &.visitas {
+        color: $primary;
+    }
+    &.usuarios {
+        color: $calipso;
+    }
+    &.cursos {
+        color: $naranjo;
+    }
+}
+
+/*Charts - Graficos */
+
+.reporte {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    .limitr{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .reporte-title {
+        background-color: #189E0E;
+        width:100%;
+        height: 5em;
+    }
+    
+    
+    .reporte-contenido {
+        display: inline-flex;
+        width: 100%;
+        height: 20em;
+        background-color: #1D96B2;
+        background-image: url(/images/graficos/chart-2.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/**/
 
 .searcher {
     justify-content: center;
@@ -270,7 +389,6 @@ main {
         display: inline-flex;
         margin-bottom: 2em;
     }
-    
     .content-cruder {
         width: 100%;
         display: flex;
@@ -401,4 +519,3 @@ main {
         background-color: $calipso;
     }
 }
-
