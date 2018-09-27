@@ -130,6 +130,37 @@ body, html{
 
 
 
+        .intro{
+          position: absolute;
+          left:49.5%;
+          top: 12.5%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          height: 180px;
+         border-radius: 5px;
+        }
+        .logo{
+              
+        }
+        .logo h2 {
+          /*Modificando el encabezado YCOURSES*/
+          text-align: center;
+          font-weight: 900;
+          font-size: 3em;
+          padding-top: 0.7em;
+          margin-bottom: 1em;
+          
+          text-transform: uppercase;
+        }
+        .logo h2 .capital {
+          /*Cambiar de color la primera letra de la palabra YCOURSES*/
+          color: black;
+        }
+        .logo h2 .regular {
+          /*La palabra YCOURSES debe ir con el color primario del "logotipo"*/
+          color: white;
+        }
+    
 
 
 
@@ -140,7 +171,7 @@ body, html{
 .tabla-padre{
           position: absolute;
           left:49.5%;
-          top: 22.5%;
+          top: 25.5%;
           transform: translate(-50%, -50%);
           -webkit-transform: translate(-50%, -50%);
           height: 180px;

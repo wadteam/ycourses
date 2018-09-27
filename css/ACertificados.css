@@ -4,6 +4,7 @@
 body{
   margin: 0;
 }
+
 body, html{
     font-family: 'Roboto', sans-serif;
     }
@@ -86,6 +87,7 @@ body, html{
          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbd52b', endColorstr='#db13d4', GradientType=1);
         */
     }
+    
   header{
     background:rgb(206, 74, 51);
   }
@@ -126,11 +128,42 @@ body, html{
     
         }
         /*AQUI TERMINA EL NAV*/
+        .intro{
+          position: absolute;
+          left:49.5%;
+          top: 10.5%;
+          transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+          height: 180px;
+         border-radius: 5px;
+        }
+        .logo{
+              
+        }
+        .logo h2 {
+          /*Modificando el encabezado YCOURSES*/
+          text-align: center;
+          font-weight: 900;
+          font-size: 3em;
+          padding-top: 0.7em;
+          margin-bottom: 1em;
+          
+          text-transform: uppercase;
+        }
+        .logo h2 .capital {
+          /*Cambiar de color la primera letra de la palabra YCOURSES*/
+          color: black;
+        }
+        .logo h2 .regular {
+          /*La palabra YCOURSES debe ir con el color primario del "logotipo"*/
+          color: white;
+        }
+ 
         /*Comienza css perfil de usuario*/
         .Padre{
             position: absolute;
             left:49.5%;
-            top: 22.5%;
+            top: 30.5%;
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             height: 180px;
