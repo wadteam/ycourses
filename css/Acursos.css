@@ -29,4 +29,34 @@
         /*La palabra YCOURSES debe ir con el color primario del "logotipo"*/
         color: white;
       }
-  
+
+      #tabla-hija table{
+        background-color: white;
+        text-align: left;
+        border-collapse: collapse;
+      width: 100%;
+      
+    }
+    
+    #tabla-hija th, td{
+      padding: 35px;
+      
+    }
+    
+    #tabla-hija thead{
+        background-color: rgb(206, 74, 51);
+        border-bottom: solid 5px rgb(121, 62, 58);
+      color: white;
+      
+    }
+    
+    #tabla-hija tr:nth-child(even){
+      background-color: #ddd;
+      
+    }
+    
+    #tabla-hija tr:hover td{
+        background-color:#c53c1a;
+      color: white;
+      cursor: pointer;
+    }

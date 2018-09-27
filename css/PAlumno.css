@@ -87,6 +87,107 @@ body, html{
         */
     }
     
+    /*Comienzo del menu desplegable*/
+    div#Compañeros{
+      
+      margin:150px auto;
+      width:1500px;
+      min-height:100px;
+     
+      overflow: hidden;
+      border-radius: 10px;
+     /* border-color: black;*/
+      text-align: center;
+    
+        border: black 1px solid;
+      
+  }
+  div#Compañeros h2{
+    font-family:  Arial, Helvetica, sans-serif;
+  }
+ 
+div#Compañeros thead{
+	background-color: rgb(206, 74, 51,0.9);
+	border-bottom: solid 5px rgb(121, 62, 58);
+  color: white;
+  
+}
+
+div.subapartado{
+width:1500px;
+min-height:100px;
+background-color: rgb(206, 74, 51);
+-webkit-transiton: height 0.2s;
+}
+
+div.titulo{
+width:1500px;
+height:100px;
+background-color: ;
+overflow: hidden;
+border-bottom: 1px solid black;
+}
+
+p.titulo{
+margin:13px;
+color: white;
+}
+
+div.info{
+width:1500px;
+height:0px;
+background-color: #f5f5f5;
+overflow: hidden;
+-webkit-transition: height 0.2s;
+}
+
+p.info{
+margin:20px;
+text-align: center;
+color:#4f4f4f;
+}
+
+div.subapartado:hover div.info{
+
+height:480px;
+
+}
+    
+#tabla-hija table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+  width: 100%;
+  
+}
+
+#tabla-hija th, td{
+  padding: 35px;
+  
+}
+
+#tabla-hija thead{
+	background-color: rgb(206, 74, 51);
+	border-bottom: solid 5px rgb(121, 62, 58);
+  color: white;
+  
+}
+
+#tabla-hija tr:nth-child(even){
+  background-color: #ddd;
+  
+}
+
+
+
+
+/* Final Del meniu desplegable*/
+
+
+
+
+/*LOGO*/
+
     .intro{
       position: absolute;
       left:49.5%;
@@ -118,7 +219,7 @@ body, html{
       color: white;
     }
 
-
+/*fINAL DE LOGO*/
   header{
     background:rgb(206, 74, 51);
   }
