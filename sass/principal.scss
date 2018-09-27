@@ -11,18 +11,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
     width: 100%;
 }
 
 body {
     font-family: $monty;
-    font-weight: 300;
-    background-color: #EFEFEF;
+    background-color: $blanco;
 }
 
 /*Para la lista de links: sin estilo para links*/
@@ -31,22 +30,28 @@ body {
 
 main {
     /*Aplicando estilos al contenido main*/
-    .container {
+    .containerd {
         /*Contenedor principal */
-        position: absolute;
-        background-color: #455668;
+        position: relative;
+        background-color: $blanco;
         width: 100%;
+        padding: 0 2% 0 2%;
     }
     .card {
-        /*Simulando componente card de bootstrap 4*/
         width: 100%;
-        position: relative;
+        display: block;
+  height: 600px;
+
+    }
+    .image{
+        display: inline-block;
+
     }
     .image img {
+         
         /* Modificando los atributos de la imagen principal del card */
-        background-size: contain;
         background-attachment: fixed;
-        height: 80%;
+        background-position: center;
         width: 100%;
     }
 }
