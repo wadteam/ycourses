@@ -1,0 +1,86 @@
+$borde-estructura:1px solid $estructura;
+/*
+*
+*/
+
+.contain-servicios {
+    /*configuracion flex*/
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /*configuracion margenes*/
+    margin: 1em 1.5em;
+    /*dimensiones*/
+    /*decoracion*/
+    border: $borde-estructura;
+    .servicios-header,
+    .servicios-contenido {
+        display: inline-flex;
+    }
+    .titler-warn,
+    .titler-calipso,
+    .titler-naranjo,
+    .titler-morado {
+        padding-left: 2em;
+        margin: 0;
+        width: 70%;
+        text-align: left;
+        padding-top: .6em;
+        font-size: 1.2em;
+        border-radius: 5px 0 0 0;
+        h3 {
+            font-family: $ubuntu;
+        }
+    }
+    .servicios-wrap {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        .item-servicio {
+            margin: 1em 0;
+            display: inline-flex;
+            background-color: $estructura;
+            width: 100%;
+            max-width: 1200px;
+            height: 10em;
+            padding: 1.2em 0 0 2em;
+            border-radius: 0 0 7px 7px;
+            &:first-child {
+                margin-top: 0;
+            }
+            .item-image {
+                height: 7em;
+                width: 7em;
+                background-image: url(/images/admin-profile.gif);
+                background-size: contain;
+                background-repeat: no-repeat;
+                border: $borde-estructura;
+                border-radius: 90px;
+                &.cursos {
+                    background-image: url(/images/book-icon.png);
+                }
+                &.capacitaciones {
+                    background-image: url(/images/capacitaciones.png);
+                }
+                &.certificaciones {
+                    background-image: url(/images/certificacion-propia.png);
+                    background-color: $naranjo;
+                }
+                &.seminarios {
+                    background-image: url(/images/businessman.png);
+                    background-color: $morado;
+                }
+            }
+            .item-bla {
+                width: 70%;
+                height: 90%;
+                background-image: url(/images/paragraph.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-left: .6em;
+            }
+        }
+    }
+}

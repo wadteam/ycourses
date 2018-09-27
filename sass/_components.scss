@@ -40,7 +40,8 @@
 .titler-calipso,
 .titler-warn,
 .titler-info,
-.titler-naranjo {
+.titler-naranjo,
+.titler-morado {
     width: 100%;
     height: 3em;
     border-radius: 3px 3px 0 0;
@@ -69,6 +70,11 @@
 
 .titler-naranjo {
     background-color: $naranjo;
+    color: $blanco;
+}
+
+.titler-morado {
+    background-color: #6363CE;
     color: $blanco;
 }
 
@@ -113,109 +119,4 @@
     /*Configuración de background*/
     background-image: url(/images/book-icon.png);
     background-color: $primary;
-}
-
-.searchr {
-    margin: 1em 0 2em .8em;
-    height: 2.6em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .inputr {
-        color: $links;
-        &:focus {
-            border: 1px solid $estructura;
-            transition: .2s all ease;
-        }
-    }
-    .btnr {
-        height: 93%;
-        border: none;
-        border-radius: 0 10px 10px 0;
-        width: 4em;
-        background-color: $estructura;
-        color: $negro;
-        cursor: pointer;
-        &:hover {
-            background-color: $links;
-            transition: .2s all ease;
-        }
-    }
-}
-
-.searchr.calipso {
-    //Personalización de buscador para informes detallados de administración -calipso -clientes
-    .inputr:focus {
-        border: 1px solid $calipso;
-    }
-    .btnr {
-        background-color: $calipso;
-        color: $blanco;
-        &:hover {
-            background-color: $calipso-darken;
-        }
-    }
-}
-
-.searchr.info {
-    //Personalización de buscador para informes detallados de administración -warn -funcionarios
-    .inputr:focus {
-        border: 1px solid $calip;
-    }
-    .btnr {
-        background-color: $calip;
-        color: $blanco;
-        &:hover {
-            background-color: $calip-darken;
-        }
-    }
-}
-
-.searchr.warn {
-    //Personalización de buscador para informes detallados de administración -warn -servicios
-    .inputr:focus {
-        border: 1px solid $primary;
-    }
-    .btnr {
-        background-color: $primary;
-        color: $blanco;
-        &:hover {
-            background-color: $primary-darken;
-        }
-    }
-}
-
-.searchr.naranjo {
-    //Personalización de buscador para informes detallados de administración -naranjo -empresas
-    .inputr:focus {
-        border: 1px solid $naranjo;
-    }
-    .btnr {
-        background-color: $naranjo;
-        color: $blanco;
-        &:hover {
-            background-color: $naranjo-darken;
-        }
-    }
-}
-
-.selectr {
-    justify-content: center;
-    align-content: center;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    padding: 0 5em 0 5em;
-    .selectr-item {
-        height: 2.3em;
-        position: relative;
-        width: 100%;
-        font-size: 1rem;
-    }
-}
-.btn.larger{
-    height: 4em;
-    width: 30%;
-    max-width: 20em;
-    min-width: 9em;
-    margin-bottom: 1.3em;
 }

@@ -7,21 +7,25 @@
 @import "_header";
 @import "_botones";
 @import "_tablas";
+@import "_perfiles";
+/*FIXME:*/
+
+@import "_components";
+@import "_indexels";
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
     width: 100%;
 }
 
 body {
     font-family: $monty;
-    font-weight: 300;
-    background-color: #EFEFEF;
+    background-color: $blanco;
 }
 
 /*Para la lista de links: sin estilo para links*/
@@ -30,22 +34,94 @@ body {
 
 main {
     /*Aplicando estilos al contenido main*/
-    .container {
-        /*Contenedor principal */
-        position: absolute;
-        background-color: #455668;
-        width: 100%;
+}
+
+.contain-presentacion {
+    /*Contenedor principal */
+    position: relative;
+    background-color: $blanco;
+    width: 100%;
+    padding: 0 .5% 0 .5%;
+}
+
+.card {
+    width: 100%;
+    .imagen {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
     }
-    .card {
-        /*Simulando componente card de bootstrap 4*/
-        width: 100%;
-        position: relative;
-    }
-    .image img {
+    .imagen img {
         /* Modificando los atributos de la imagen principal del card */
-        background-size: contain;
+        background-image: url(/images/speaker.png);
         background-attachment: fixed;
-        height: 80%;
+        background-position: center;
+        background-size: cover;
         width: 100%;
+        height: 40%;
+    }
+    .card-contenido {
+        margin-top: -2em;
+        display: inline-block;
+        width: 100%;
+        height: 6em;
+        text-align: center;
+        padding-top: 1em; //Configuración de color
+        background: $primary;
+        background: -webkit-linear-gradient(to right, #8a2387, #e94057, $primary);
+        background: linear-gradient(to right, #8a2387, #e94057, $primary);
+        border: 1px solid $primary;
+        color: $blanco;
+        h2,
+        h3 {
+            display: inline-block;
+            font-family: $ubuntu;
+            font-weight: 600;
+            height: 1.7em;
+        }
+        a {
+            margin-top: .8em;
+            text-decoration: underline;
+            color: white;
+            height: 1em;
+            width: 10em;
+            &:hover {
+                color: rgb(183, 123, 240);
+                transition: .3s all ease;
+            }
+        }
     }
 }
+
+/*Contains*/
+
+.contain-separador,
+.contain-servicios {
+    display: flex;
+}
+
+.contain-separador {
+    /*configuracion flex*/
+    flex-direction: row;
+    justify-content: center;
+    /*dimensiones*/
+    height: 9em;
+    width: 100%;
+    padding-top: 2em;
+    /*bordes*/
+    border: $borde-estructura;
+    .dropd {
+        //configuracion de imagen
+        background-image: url(/images/red-down-arrow-png-5.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* Dimensiones */
+        width: 5rem;
+        height: 5rem;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+

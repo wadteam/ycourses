@@ -1,0 +1,119 @@
+/*Editando perfiles*/
+
+.limiter-perfil,
+.card-perfil,
+.header-perfil,
+.main-perfil {
+    width: 100%;
+}
+
+.limiter-perfil {
+    padding: 2em 8em 2em 8em;
+    height: 100%;
+    background-color: $blanco;
+    
+}
+
+.card-perfil {
+    display: flex;
+    flex: 1 0 44em;
+    flex-direction: column;
+    height: 100%;
+    min-height: 1200px;
+    background-color: white;
+    
+}
+
+.header-perfil {
+    height: 20%;
+    min-height: 15em;
+    max-height: 40em;
+    opacity: .8;
+    background-color: $estructura;
+    border-radius: 5px 5px 0 0;
+    //Personalización
+    &.alumno{
+        background-color: $calip;
+    }
+    &.funcionario{
+        background-color: $naranjo;
+    }
+    &.admin{
+        background-color: $calipso;
+    }
+    .limiter-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1em;
+        height: 100%;
+    }
+    .header-perfil-icon {
+        display: inline-flex;
+        height: 180px;
+        min-width: 3em;
+        width: 180px;
+        min-width: 3em;
+        background-image: url(/images/admin-profile.gif);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+        border-radius: 90px;
+        background-color: white;
+        //variaciones
+        &.alumno{
+            background-image: url(/images/profile-avatar.png);
+        }
+        &.funcionario{
+            background-image: url(/images/funcionario-icon.png);
+        }
+        &.admin{
+            background-image: url(/images/admin-profile.gif);
+        }
+    }
+}
+
+.main-perfil {
+    border: 1px solid gray;
+    border-top: none;
+    height: 80%;
+    padding: 2em 4em 0 4em;
+    
+    .container-main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .input-perfil {
+        
+        width: 100%;
+        height: 3em;
+        display: inline-flex;
+        
+    }
+    label{
+        font-weight: 800;
+        margin: .6em 0 .6em 0;
+    }
+    .main-botones{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        margin-top: 2em;
+        
+        .btn{
+            margin-left: 0;
+            width: 19em;
+            margin-bottom: 2em;
+
+            &.guardar{
+                width: 12em;
+                height: 3.5em;
+                font-weight: 600;
+            }
+        }
+    }
+}
