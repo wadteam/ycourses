@@ -223,7 +223,7 @@ html {
   ".3s" nos indica que la animación durará 1/3 de segundo.
   "all" debe aplicarse un efecto de transición a todos los cambios que experimente este botón.
   "ease" es el valor por defecto de esta propiedad y el tipo de transición en cuestión; nos indica que el efecto comienza lentamente para luego volverse rápido, y terminar de forma lenta. Puedes jugar con los valores de la cantidad de segundos para notar con facilidad como funciona este valor.
-  
+
   */
   background-color: #992337;
   transition: 0.3s all ease;
