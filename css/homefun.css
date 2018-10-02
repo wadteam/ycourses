@@ -92,6 +92,7 @@ h1 {
 h2{
   margin-top: 20px;
   color: rgb(255, 255, 255);
+  font-size: 17px;
 
 }
 
@@ -139,7 +140,7 @@ p {
   margin-bottom: 10px;
   width: 400px;
   height: 30px;
- 
+
 
 }
 
@@ -151,10 +152,7 @@ p {
  
 }
 
-*/
-
-
-/* .menu-v a:hover {
+ .menu-v a:hover {
   background-color: #4e8686b6;
  
 }
