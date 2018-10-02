@@ -203,25 +203,45 @@ header nav ul li.link-ingreso a:hover {
   background-color: #1D96B2;
   color: #FFFFFF;
 }
+.btn.calipso:hover {
+  background-color: #0e8ca8;
+  transition: 0.5s all ease;
+}
 .btn.naranjo {
   /*variación para botones naranjos*/
   background-color: #ff8000;
   color: #FFFFFF;
+}
+.btn.naranjo:hover {
+  background-color: #d3560e;
+  transition: 0.5s all ease;
 }
 .btn.warn {
   /*variación para botones de advertencia*/
   background-color: #ea5252;
   color: #FFFFFF;
 }
+.btn.warn:hover {
+  background-color: #992337;
+  transition: 0.5s all ease;
+}
 .btn.warn-darken {
   /*variación para botones de advertencia*/
   background-color: #992337;
   color: #FFFFFF;
 }
+.btn.warn-darken:hover {
+  background-color: #ea5252;
+  transition: 0.5s all ease;
+}
 .btn.info {
   /*variación para botones de advertencia*/
   background-color: #3c91ff;
   color: #FFFFFF;
+}
+.btn.info:hover {
+  background-color: #367fdf;
+  transition: 0.5s all ease;
 }
 
 table {
@@ -334,14 +354,7 @@ table.mod-naranjo th {
   border-radius: 5px 5px 0 0;
 }
 .header-perfil.alumno {
-  background: rgba(248,80,50,1);
-background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(50%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
-background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
-background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
-background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
-background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=1 );
+  background-color: #3c91ff;
 }
 .header-perfil.funcionario {
   background-color: #ff8000;
@@ -629,6 +642,172 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', end
   background-repeat: no-repeat;
   background-size: cover;
   margin-left: 0.6em;
+}
+
+.footer {
+  /*Dimensiones*/
+  height: 20%;
+  min-height: 20em;
+  max-height: 25em;
+  width: 100%;
+  /*Margenes y paddings*/
+  margin-top: 3em;
+  padding: 1em;
+  /*Display*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  /*Estéticos*/
+  background-color: rgba(128, 128, 128, 0.2);
+  border: 1px solid gray;
+}
+
+.foot-logo,
+.foot-contacto,
+.foot-links {
+  height: 90%;
+  min-height: 15em;
+  max-height: 25em;
+  display: inline-flex;
+}
+
+.foot-logo,
+.foot-contacto {
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.foot-logo {
+  width: 20%;
+  justify-content: left;
+  padding-top: 3em;
+  padding-left: 1em;
+}
+.foot-logo .capital,
+.foot-logo .regular {
+  font-family: Montserrat-Bold, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.foot-logo .capital {
+  color: #000000;
+}
+.foot-logo .regular {
+  color: #ea5252;
+}
+.foot-logo .copy {
+  text-transform: lowercase;
+  font-size: 0.7rem;
+  vertical-align: bottom;
+}
+
+.foot-contacto {
+  width: 50%;
+  height: 10em;
+}
+
+.contacto-insider {
+  padding: 0 0.8em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  /**/
+}
+.contacto-insider .servicios,
+.contacto-insider .registro {
+  display: inline-flex;
+  padding: 0;
+  height: 4em;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+.contacto-insider .servicios .btn {
+  font-size: 0.9rem;
+  width: 18rem;
+  height: 80%;
+  font-family: Ubuntu-Bold, sans-serif;
+}
+.contacto-insider .registro {
+  margin-top: 1.3em;
+}
+.contacto-insider .registro .btn {
+  font-size: 1rem;
+  width: 9rem;
+  height: 70%;
+  border-radius: 3px;
+  background-color: #6363CE;
+}
+.contacto-insider .registro .btn:hover {
+  background-color: #5353c7;
+  transition: 0.5s all ease;
+}
+.contacto-insider .social {
+  display: inline-flex;
+  padding: 0;
+  height: 5em;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3em;
+}
+.contacto-insider .social .icono {
+  height: 2em;
+  width: 2em;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 90px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.contacto-insider .social .icono:hover {
+  height: 2.4em;
+  width: 2.4em;
+  transition: 0.6s all ease;
+}
+.contacto-insider .social .face {
+  background-image: url(/images/social/facebook-square-brands.svg);
+}
+.contacto-insider .social .instagram {
+  background-image: url(/images/social/instagram-brands.svg);
+}
+.contacto-insider .social .twitter {
+  background-image: url(/images/social/twitter-square-brands.svg);
+}
+.contacto-insider .social .pinterest {
+  background-image: url(/images/social/pinterest-brands.svg);
+}
+.contacto-insider .social .whatsapp {
+  background-image: url(/images/social/whatsapp-brands.svg);
+}
+
+.foot-links {
+  width: 30%;
+  justify-content: center;
+  padding-top: 2em;
+}
+.foot-links ul {
+  list-style-type: none;
+}
+.foot-links li {
+  padding-bottom: 0.7rem;
+}
+.foot-links a {
+  color: brown;
+  text-decoration: none;
+}
+.foot-links a:hover {
+  text-decoration: underline;
+  transition: 0.4s all ease;
+  color: #8d2525;
+}
+.foot-links a:visited {
+  color: #3d0808;
 }
 
 * {

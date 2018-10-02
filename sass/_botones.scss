@@ -15,25 +15,45 @@
         /*variación para botones calipso*/
         background-color: $calipso;
         color: $blanco;
+        &:hover {
+            background-color: $calipso-darken;
+            transition: .5s all ease;
+        }
     }
     &.naranjo {
         /*variación para botones naranjos*/
         background-color: $naranjo;
         color: $blanco;
+        &:hover {
+            background-color: $naranjo-darken;
+            transition: .5s all ease;
+        }
     }
     &.warn {
         /*variación para botones de advertencia*/
         background-color: $primary;
         color: $blanco;
+        &:hover {
+            background-color: $primary-darken;
+            transition: .5s all ease;
+        }
     }
     &.warn-darken {
         /*variación para botones de advertencia*/
         background-color: $primary-darken;
         color: $blanco;
+        &:hover {
+            background-color: $primary;
+            transition: .5s all ease;
+        }
     }
     &.info {
         /*variación para botones de advertencia*/
         background-color: $calip;
         color: $blanco;
+        &:hover {
+            background-color: $calip-darken;
+            transition: .5s all ease;
+        }
     }
 }
