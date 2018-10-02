@@ -17,6 +17,12 @@ header {
   margin-left: 31%;
 }
 
+.paneluno {
+  width: 1000px;
+  height: 160px;
+  display: block;
+  margin-left: 31%;
+}
 li {
   list-style: none;
   margin-left: 20px;
@@ -72,7 +78,7 @@ li {
 .panel3 {
   background-color: #48879b;
   width: 1000px;
-  height: 200px;
+  height: 340px;
   display: block;
   margin-left: 31%;
   text-align: justify;
@@ -142,8 +148,7 @@ p {
   width: 200px;
   height: 30px;
   background-color: rgb(255, 255, 255);
-  border-color: #515f7e;
-
+ 
 }
 
 */
