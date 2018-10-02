@@ -95,9 +95,9 @@ body, html{
       min-height:100px;
      
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: 4px;
      /* border-color: black;*/
-      text-align: center;
+      text-align: left;
     
         border: black 1px solid;
       
@@ -116,7 +116,7 @@ div#Compañeros thead{
 div.subapartado{
 width:1500px;
 min-height:100px;
-background-color: rgb(206, 74, 51);
+background-color:white;
 -webkit-transiton: height 0.2s;
 }
 
@@ -142,7 +142,7 @@ overflow: hidden;
 }
 
 p.info{
-margin:20px;
+margin:1px;
 text-align: center;
 color:#4f4f4f;
 }
