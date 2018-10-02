@@ -354,7 +354,7 @@ table.mod-naranjo th {
   border-radius: 5px 5px 0 0;
 }
 .header-perfil.alumno {
-  background:rgb(206, 74, 51);
+  background-color: #3c91ff;
 }
 .header-perfil.funcionario {
   background-color: #ff8000;
