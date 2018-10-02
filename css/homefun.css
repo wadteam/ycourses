@@ -19,6 +19,7 @@ header {
 
 li {
   list-style: none;
+  margin-left: 5%;
 }
 
 .seccion1 {
@@ -48,16 +49,20 @@ li {
   height: 250px;
   display: block;
   margin-left: 31%;
-  text-align: center;
+  text-align: justify;
 }
 
 h1 {
   color: #303C49;
+
 }
 
 p {
   color: white;
-  text-align: left;
+  text-align: justify;
+  margin-left: 3%;
+  margin-right: 3%;
+
 }
 
 .contenedor {
@@ -80,23 +85,25 @@ p {
   float: left;
   background-color: #eee;
   color: #4f638d;
+  
 }
 
-.menu-v a {
+ .menu-v a {
   background-color: #eee;
   color: black;
   display: block;
-  padding: 12px;
+  padding: 17px;
   text-decoration: none;
-}
+} */
 
-.menu-v a:hover {
+/* .menu-v a:hover {
   background-color: #4e8686b6;
+ 
 }
 
 .menu-v a.active {
   background-color: #15c5aecb;
   color: white;
-}
+} 
 
 /*# sourceMappingURL=homefun.css.map */
