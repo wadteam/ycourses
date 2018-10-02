@@ -19,8 +19,8 @@ header {
 
 li {
   list-style: none;
-  margin-left: 5%;
-}
+  margin-left: 20px;
+  }
 
 .seccion1 {
   background-color: white;
@@ -43,6 +43,23 @@ li {
   text-align: center;
 }
 
+
+.seccion4 {
+  background:#EA5252;
+  height: 150px;
+  width: 497px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+.seccion5 {
+  background-color:rgb(240, 125, 32);
+    width: 497px;
+    height: 150px;
+  display: inline-block;
+  text-align: center;
+}
 .panel2 {
   background-color: #48879b;
   width: 1000px;
@@ -52,8 +69,23 @@ li {
   text-align: justify;
 }
 
+.panel3 {
+  background-color: #48879b;
+  width: 1000px;
+  height: 200px;
+  display: block;
+  margin-left: 31%;
+  text-align: justify;
+}
+
 h1 {
   color: #303C49;
+
+}
+
+h2{
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
 
 }
 
@@ -94,7 +126,28 @@ p {
   display: block;
   padding: 17px;
   text-decoration: none;
-} */
+} 
+
+.busca{
+  margin-top: 12px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 30px;
+ 
+
+}
+
+.boton{
+  border-radius: 6px;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-color: #515f7e;
+
+}
+
+*/
+
 
 /* .menu-v a:hover {
   background-color: #4e8686b6;
