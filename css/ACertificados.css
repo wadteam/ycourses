@@ -20,6 +20,7 @@ body, html{
     */
     /* se le dara color gradiente al body*/
     body{
+      /*
     background: rgba(248,80,50,1);
     background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(231,56,39,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(50%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
@@ -173,8 +174,7 @@ body, html{
           
         
  .hijo {
-            background-color:
-            rgb(255,255,255,1.0); 
+  background:rgb(206, 74, 51,0.9); 
             font-family: 'Roboto', sans-serif;
             border-radius: 0px;
             height: 430px;
@@ -247,5 +247,5 @@ body, html{
   }
 
   .jo input:hover{
-    background-color: #c53c1a;
+    background:rgb(206, 74, 51);
   }
