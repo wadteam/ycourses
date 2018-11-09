@@ -32,8 +32,30 @@ function validarFun() {
     alert("EL CAMPO TELEFONO 1 ESTA VACIO");
     return false;
     /*validacion de cantidad de caracteres y aceptacion del + */
-  } else if (Tel1 == null || Tel1.legnth == 0 || /^\s+$/.test(Tel1)||Tel1.length) {
-      alert ("CAMPO TELEFONO MAL INGRESADO");
+  } else if (
+    Tel1 == null ||
+    Tel1.legnth == 0 ||
+    /^\s+$/.test(Tel1) ||
+    Tel1.length
+  ) {
+    alert("CAMPO TELEFONO MAL INGRESADO");
     return false;
   }
 }
+/*
+filtro de las letras
+var filter6=/^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
+---------------if ---------------------------------
+if (filter6.test(document.getElementById("EL_ID_DEL_CAMPO"))){
+alert("Es puro texto")
+}
+else{
+alert("No es texto")
+}
+----------------------------------------------------------------
+--------------------------otro tipo de validacion  de texto
+  else if(document.form.nombre.value.match(/[a-z]/){
+     alert('Solo letras por favor');
+     document.form.nombre.focus();
+     return false;
+}*/
